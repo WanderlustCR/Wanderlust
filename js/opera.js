@@ -41,7 +41,7 @@ taskForm.addEventListener('click',  (e) =>{
     </div>
 
      <div class="text-center">
-        <a class="btn btn-primary btn-lg" href="services.html">Back</a>
+        <a class="btn btn-primary btn-lg" href="https://www.thewanderlustcr.com/services.html#Inicio">Back</a>
         <a class="btn btn-primary btn-lg" href="contact.html">Reserve</a>
       </div>
       
@@ -51,9 +51,11 @@ taskForm.addEventListener('click',  (e) =>{
 
 });
 
+
 window.addEventListener('DOMContentLoaded', async (e) =>{	
 	//const querySnapshot = await getTask(); cada que actualiza
   console.log(jQuery(location).attr('href').substr(38));
+
 taskForm.innerHTML =`   <div class="row">
       <div class="col-md-6 col-md-offset-3">
         <div class="text-center">
@@ -160,7 +162,7 @@ taskForm.innerHTML =`   <div class="row">
          <figure class="effect-zoe">
         <img src="img/Tortuguero.jpg" alt="img25" />
         <figcaption>
-          <h2> <span><a href="#"> Tortuguero National Park</a></span></h2>
+          <h2> <span><a href="#"> Tortuguero NP</a></span></h2>
           <p class="icon-links">$140 pp</p>
         </figcaption>
       </figure>
