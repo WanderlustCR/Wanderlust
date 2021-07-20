@@ -41,7 +41,7 @@ taskForm.addEventListener('click',  (e) =>{
     </div>
 
      <div class="text-center">
-        <a class="btn btn-primary btn-lg" href="https://www.thewanderlustcr.com/services.html#Inicio">Back</a>
+        <a class="btn btn-primary btn-lg" href="services.html">Back</a>
         <a class="btn btn-primary btn-lg" href="contact.html">Reserve</a>
       </div>
       
@@ -50,11 +50,18 @@ taskForm.addEventListener('click',  (e) =>{
 	}
 
 });
-
+//hashchange
+window.addEventListener('hashchange',(e)=>{
+ 
+  const name = jQuery(location).attr('href');
+  if(name == "https://www.thewanderlustcr.com/services.html"){
+     console.log(jQuery(location).attr('href'));
+  }
+});
 
 window.addEventListener('DOMContentLoaded', async (e) =>{	
 	//const querySnapshot = await getTask(); cada que actualiza
-  console.log(jQuery(location).attr('href').substr(38));
+
 
 taskForm.innerHTML =`   <div class="row">
       <div class="col-md-6 col-md-offset-3">
