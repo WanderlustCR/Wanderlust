@@ -53,7 +53,7 @@ taskForm.addEventListener('click',  (e) =>{
 
 window.addEventListener('DOMContentLoaded', async (e) =>{	
 	//const querySnapshot = await getTask(); cada que actualiza
-
+  console.log(jQuery(location).attr('href').substr(38));
 taskForm.innerHTML =`   <div class="row">
       <div class="col-md-6 col-md-offset-3">
         <div class="text-center">
