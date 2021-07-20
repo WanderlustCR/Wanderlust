@@ -1,12 +1,9 @@
 const taskForm = document.getElementById('Tours');
+const Desaparece1 = document.getElementById('Desaparece1');
 
-taskForm.addEventListener('click',  (e) =>{	
-	//const querySnapshot = await getTask(); cada que actualiza
-	const name = e.target.innerHTML;
-
-	if(name == " 6 in 1"){
-			console.log(name);
-			taskForm.innerHTML =`<section id="aqui"></section>
+function Vip(){
+    console.log(name);
+      taskForm.innerHTML =`<section id="aqui"></section>
 <div class="container">
     <div class="row">
       <div class="col-md-12 ">
@@ -47,15 +44,112 @@ taskForm.addEventListener('click',  (e) =>{
       
   </div>`
 
-	}
+}
+
+function SeisEnUno(){
+  console.log(name);
+  taskForm.innerHTML =`<div class="row">
+      <div class="col-md-8 ">
+        <div class="portfolios">
+          <div class="text-center">
+            <h2>6 en 1</h2>
+            </div>
+            <p class=izquierda>
+              Rainforest Adventures, Costa Rica, offers you the most complete eco-adventure package of
+              the country. This “6 in 1” includes attractive products to assure you an incredible and
+              unforgettable natural experience. Enjoy alongside your family and friends of the spectacular
+              Atlantic rainforest within Braulio Carrillo Park, by doing some activities like: aerial tram,
+              zip-lines, adrena-line, butterflies and frogs garden, a guided walk and a hanging bridge tour.
+            </p>
+            <p class=izquierda>
+              Start this rich experience with a true flight over the treetops in our comfortable aerial tram
+              while an expert naturalist guide describes hidden treasures of the forest
+            </p>
+            <p class=izquierda>
+              Then you’ll experience real emotion with our zip line tour with 14 safe platforms and 10 cables,
+               which include the thrill of the Adrena-line cable, of 2297 feet long and 55 km/h speed.
+            </p>
+            <p class=izquierda>
+              Back to the
+              ground you will feel relaxation during a guided walk through our natural trails with a visit
+              over Molinete river’s hanging bridge and a fun and educational stop to our very own
+              hummingbird, butterflies and frogs garden, where you can learn about different species of the
+              region.
+
+            </p>
+          
+          <hr>
+               <div class="text-center">
+        <a class="btn btn-primary btn-lg" href="contact.html">Reserve</a>
+      </div>
+        </div>
+      </div>
+       <div class="col-md-4 ">
+        <div class="portfolios">
+          <div class="wow bounceIn" data-wow-offset="0" data-wow-delay="0.0s">
+             <h3>Include</h3>
+            <div class="icon">
+              <img src="img/Iconos/bus.png">
+            </div>
+            <p  class="centrado">Transportation</p>
+            <div class="ficon">
+            </div>
+          </div>
+
+          <div class="wow bounceIn" data-wow-offset="0" data-wow-delay="0.0s">
+            <div class="icon">
+              <img src="img/Iconos/entradas.png">
+            </div>
+            <p  class="centrado">Entrance</p>
+            <div class="ficon">
+            </div>
+          </div>
+
+          <div class="wow bounceIn" data-wow-offset="0" data-wow-delay="0.0s">
+            <div class="icon">
+              <img src="img/Iconos/comida.png">
+            </div>
+            <p  class="centrado">Lunch</p>
+            <div class="ficon">
+            </div>
+          </div>
+
+          <div class="wow bounceIn" data-wow-offset="0" data-wow-delay="0.0s">
+            <div class="icon">
+              <img src="img/Iconos/guia.png">
+            </div>
+            <p  class="centrado">Guide</p>
+            <div class="ficon">
+            </div>
+          </div>
+
+          </div>
+       </div>
+    </div>`
+
+    Desaparece1.style.display = 'block';
+
+
+
+}
+
+
+taskForm.addEventListener('click',  (e) =>{	
+	//const querySnapshot = await getTask(); cada que actualiza
+	const name = e.target.innerHTML;
+
+	if(name == " 6 in 1"){
+    SeisEnUno();
+	}else if(name == "Vip City Bus"){
+          Vip();
+        }
 
 });
 //hashchange
 window.addEventListener('hashchange',(e)=>{
- 
   const name = jQuery(location).attr('href');
   if(name == "https://www.thewanderlustcr.com/services.html"){
-     taskForm.innerHTML = ``;
+    Desaparece1.style.display = 'none';
      taskForm.innerHTML =`   <div class="row">
       <div class="col-md-6 col-md-offset-3">
         <div class="text-center">
@@ -225,7 +319,7 @@ window.addEventListener('hashchange',(e)=>{
   }
 });
 
-window.addEventListener('DOMContentLoaded', async (e) =>{	
+window.addEventListener('DOMContentLoaded', async (e) =>{	//DOMContentLoaded
 	//const querySnapshot = await getTask(); cada que actualiza
 
 
