@@ -1546,7 +1546,8 @@ window.addEventListener('hashchange',(e)=>{
 
 window.addEventListener('DOMContentLoaded', async (e) =>{	//DOMContentLoaded
 	//const querySnapshot = await getTask(); cada que actualiza
-	   const name = jQuery(location).attr('href');
+   const name = jQuery(location).attr('href')
+     console.log(name)
   if(name == "https://www.thewanderlustcr.com/services.html#6-in-1"){
     SeisEnUno();
   }else if(name == "https://www.thewanderlustcr.com/services.html#VIP"){
