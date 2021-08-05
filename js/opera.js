@@ -1160,7 +1160,7 @@ function SeisEnUno(){
 
 
 function inicio(){
-  document.getElementById('trans').style.display = "block";
+  document.getElementById('trans').style.display = "none";
   taskForm.innerHTML =`   <div class="row">
       <div class="col-md-6 col-md-offset-3">
         <div class="text-center">
@@ -1330,6 +1330,7 @@ function inicio(){
 }
 function trans(){
    document.getElementById('trans').style.display = "block";
+   taskForm.style.display = "none";
 }
 
 
