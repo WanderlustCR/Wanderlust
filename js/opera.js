@@ -1381,14 +1381,7 @@ function trans(){
 `
 }
 
-select.addEventListener('click',(e) =>{
-  const Pickup = document.getElementById("Pickup").value;
-  const Dropof = document.getElementById("Dropof").value;
-  const passeger = document.getElementById("passeger").value;
-  if(Pickup == "San Jose" && Dropof =="Heredia" && passeger <= 7){
-      console.log("El precio es de $50")
-  }
-});
+
 
 
 taskForm.addEventListener('click',  (e) =>{	
@@ -1468,6 +1461,16 @@ window.addEventListener('DOMContentLoaded', async (e) =>{	//DOMContentLoaded
 
 
 })
+
+
+select.addEventListener('click',(e) =>{
+  const Pickup = document.getElementById("Pickup").value;
+  const Dropof = document.getElementById("Dropof").value;
+  const passeger = document.getElementById("passeger").value;
+  if(Pickup == "San Jose" && Dropof =="Heredia" && passeger <= 7){
+      console.log("El precio es de $50")
+  }
+});
 
 /*
 
