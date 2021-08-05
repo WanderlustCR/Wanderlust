@@ -1,4 +1,6 @@
 const taskForm = document.getElementById('Tours');
+const select = document.getElementById('Serch');
+
 
 function canopy(){
   taskForm.innerHTML = `<div class="row">
@@ -1156,6 +1158,7 @@ function SeisEnUno(){
 
 }
 
+
 function inicio(){
   taskForm.innerHTML =`   <div class="row">
       <div class="col-md-6 col-md-offset-3">
@@ -1163,7 +1166,7 @@ function inicio(){
           <h2>One and Half day tours</h2>
 
             <p>
-              <br>4% Value Added Taxes (VAT), must be summed up to all rates <br> From July 2021 to July 2022<br>Click the name to see more information.
+              <br>4% Value Added Taxes (VAT), must be summed up to all rates <br> From July 2021 to July 2022<br><strong>Click the name to see more information<strong>.
           </p>
         </div>
         <hr>
@@ -1324,6 +1327,68 @@ function inicio(){
     </div>
   </div>`
 }
+function trans(){
+   taskForm.innerHTML = `<div class="col-md-12">
+<div class="Selections">
+
+  <label for="cars"> </label><br>
+  <select name="Pickup" id="Pickup" class="sel">
+    <option hidden selected>DEPARTURE</option>
+    <option value="Volcán Irazú - Ruinas de Cartago & Basilica">Volcán Irazú - Ruinas de Cartago & Basilica</option>
+    <option value="San Jose">San Jose</option>
+    <option value="Heredia">Heredia</option>
+    <option value="Alajuela">Alajuela</option>
+    <option value="Cartago">Cartago</option>
+    <option value="Guanacaste">Guanacaste</option>
+    <option value="Puntarenas">Puntarenas</option>
+  </select>
+
+    <select name="Dropof" id="Dropof" class="sel">
+      <option hidden selected>ARRIVAL</option>
+      <option value="Volcán Irazú - Ruinas de Cartago & Basilica">Volcán Irazú - Ruinas de Cartago & Basilica</option>
+      <option value="San Jose">San Jose</option>
+      <option value="Heredia">Heredia</option>
+      <option value="Alajuela">Alajuela</option>
+      <option value="Cartago">Cartago</option>
+      <option value="Guanacaste">Guanacaste</option>
+      <option value="Puntarenas">Puntarenas</option>
+    </select>
+
+
+    <select name="passeger" id="passeger" class="sel">
+      <option hidden selected>PASSENGER</option>
+      <option value="1"> 1</option>
+      <option value="2"> 2</option>
+      <option value="3"> 3</option>
+      <option value="4"> 4</option>
+      <option value="5"> 5</option>
+      <option value="6"> 6</option>
+      <option value="7"> 7</option>
+      <option value="8"> 8</option>
+      <option value="9"> 9</option>
+      <option value="10">10</option>
+    </select>
+
+    <input type="date" id="start" name="trip-start"
+       value="2018-07-22"
+       min="2021-01-01" max="2025-12-31">
+   
+
+   <a class="btn btn-primary btn-lg" id="Serch" href="#1">Serch</a>
+   </div>
+
+</div>
+`
+}
+
+select.addEventListener('click',(e) =>{
+  const Pickup = document.getElementById("Pickup").value;
+  const Dropof = document.getElementById("Dropof").value;
+  const passeger = document.getElementById("passeger").value;
+  if(Pickup == "San Jose" && Dropof =="Heredia" && passeger <= 7){
+      console.log("El precio es de $50")
+  }
+});
 
 
 taskForm.addEventListener('click',  (e) =>{	
@@ -1375,6 +1440,10 @@ window.addEventListener('hashchange',(e)=>{
     Cooffee();
   }else if(name == "https://www.thewanderlustcr.com/services.html#Combo"){
     combo();
+  }else if(name == "https://www.thewanderlustcr.com/services.html#Transport"){
+    trans();
+  }else if(name == "https://www.thewanderlustcr.com/services.html#Tours"){
+    inicio();
   }
 
 });
