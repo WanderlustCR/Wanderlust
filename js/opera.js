@@ -1161,6 +1161,7 @@ function SeisEnUno(){
 
 function inicio(){
   document.getElementById('trans').style.display = "none";
+  taskForm.style.display = "block";
   taskForm.innerHTML =`   <div class="row">
       <div class="col-md-6 col-md-offset-3">
         <div class="text-center">
