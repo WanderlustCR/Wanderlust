@@ -634,11 +634,11 @@ function TortugaIsland(){
     <div class="content">
       <div class="grid">
         <figure class="effect-zoe">
-          <img src="img/Tortuga/tortuga.jpg" width="560" height="366" alt="img25" />
+          <img src="img/Tortuga/Tortuga.jpg" width="560" height="366" alt="img25" />
         </figure>
 
         <figure class="effect-zoe">
-          <img src="img/Tortuga/tortuga2.jpg" width="560" height="366" alt="img25" />
+          <img src="img/Tortuga/Tortuga2.jpg" width="560" height="366" alt="img25" />
         </figure>
       </div>
     </div>`
