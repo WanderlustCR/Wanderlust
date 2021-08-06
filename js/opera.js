@@ -1,5 +1,6 @@
 const taskForm = document.getElementById('Tours');
 const select = document.getElementById('Serch');
+const dirT = document.getElementById('DireccionT');
 
 
 function canopy(){
@@ -1396,6 +1397,10 @@ window.addEventListener('hashchange',(e)=>{
 
 window.addEventListener('DOMContentLoaded', async (e) =>{	//DOMContentLoaded
 	//const querySnapshot = await getTask(); cada que actualiza
+
+  dirT.style.display = "none";
+
+
    const name = jQuery(location).attr('href')
      console.log(name)
   if(name == "https://www.thewanderlustcr.com/services.html#6-in-1"){
@@ -1409,20 +1414,50 @@ window.addEventListener('DOMContentLoaded', async (e) =>{	//DOMContentLoaded
   }else{
      inicio();
   }
- 
+ var today = new Date();
+var dd = today.getDate();
+var mm = today.getMonth()+1;
+var yyyy = today.getFullYear();
+ if(dd<10){
+        dd='0'+dd
+    } 
+    if(mm<10){
+        mm='0'+mm
+    } 
+
+today = yyyy+'-'+mm+'-'+dd;
+document.getElementById("start").setAttribute("min", today);
+document.getElementById("start").setAttribute("value", today);
 
 
 
 })
 
 
+
+
 select.addEventListener('click',(e) =>{
+    dirT.style.display = "block";
   const Pickup = document.getElementById("Pickup").value;
   const Dropof = document.getElementById("Dropof").value;
   const passeger = document.getElementById("passeger").value;
-  if(Pickup == "San Jose" && Dropof =="Heredia" && passeger <= 7){
+  const dateT = document.getElementById("start").value;
+
+  if(Pickup == "DEPARTURE" || Dropof == "ARRIVAL" || passeger =="PASSENGER"){
+      alert("Please complete all spaces")
+  }else{  
+     if( (Pickup == "San Jose" || Pickup == "Heredia" || Pickup == "Alajuela") && (Dropof =="Heredia" || Dropof =="Alajuela" || Dropof =="San Jose")){
+    if(passeger <= 7){
       console.log("El precio es de $50")
+    }else if(passeger <= 10 && passeger > 7){
+      console.log("El precio es de $57")
+    }
   }
+  }
+
+
+
+ 
 });
 
 /*

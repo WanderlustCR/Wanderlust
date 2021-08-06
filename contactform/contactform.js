@@ -24,11 +24,11 @@ taskForm.addEventListener('submit',  (e)=>{
     const email = taskForm['email'];
     const subjetct = taskForm['subject'];
     const message = taskForm['message'];
-    const mail = "mailto: jeaustin.rdz@gmail.com?subject="+subjetct.value+"&body="+email.value+"                   "+ name.value + "                  " + message.value;
+    const mail = "mailto: info@thewanderlustcr.com?subject="+subjetct.value+"&body="+"Email: "+email.value+"%0D%0A Name: "+ name.value + "%0D%0A Message: " + message.value;
     confirmacion.innerHTML = ``;
     reconfirmation.innerHTML += ` 
-     <div class="text-center"><a href= "${mail}"><button type="button" class="btn btn-primary btn-lg"> Send Message</button></a></div>`
-
+     <div class="text-center"><a href= "${mail}" id="sub"><button type="button" class="btn btn-primary btn-lg"> Send Message</button></a></div>`
+      document.getElementById("sub").click();
 });
 
 reconfirmation.addEventListener('click', async (e)=>{
@@ -36,7 +36,7 @@ reconfirmation.addEventListener('click', async (e)=>{
     const email = taskForm['email'];
     const subjetct = taskForm['subject'];
     const message = taskForm['message'];
-    alert("Your message is send")
+    alert("Your message is progresing")
     await saveTask(name.value,email.value,subjetct.value, message.value,anio,dia,mes);
 });
     //"email: " + email + "message: "+ message+ "body: " + body;
