@@ -53,37 +53,28 @@
     <div class="container">
       <div class="center">
         <h2>Contact Us</h2>
+        <h2>Contact Us</h2>
         <p>Send us a message and we will contact you soon </p>
       </div>
-      <div id="tasks-container" class="row contact-wrap">
-        <div class="col-md-8 col-md-offset-2">
-          <div id="sendmessage">Your message has been sent. Thank you!</div>
-          <div id="errormessage"></div>
-          <form id="task-form" action="" method="post" role="form" class="contactForm">
-            <div class="form-group">
-              <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+
+
+      <form action="https://formsubmit.co/info@thewanderlustcr.com" method="POST">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://www.thewanderlustcr.com/#Exito">
+        <div class="form-group">
+              <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars"required />
               <div class="validation"></div>
             </div>
-            <div class="form-group">
-              <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+        <div class="form-group">
+              <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" required/>
               <div class="validation"></div>
             </div>
-            <div class="form-group">
-              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-              <div class="validation"></div>
-            </div>
-            <div class="form-group">
+         <div class="form-group">
               <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
               <div class="validation"></div>
             </div>
-
-            <div class="text-center" id="confirmacion"><button type="submit" class="btn btn-primary btn-lg">confirmation</button></div>
-            <div class="text-center" id=reconfirmation></div>
-
-
-          </form>
-        </div>
-      </div>
+       <div class="text-center" id="confirmacion"><button type="submit" class="btn btn-primary btn-lg">confirmation</button></div>
+    </form>
       <!--/.row-->
     </div>
     <!--/.container-->
@@ -130,10 +121,7 @@
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
 </script>
-  <script src="contactform/contactform.js"></script>
-
-
-
+<script src="contactform/contactform.js"></script>
 </body>
 <footer>
     <div class="inner-footer">
@@ -160,8 +148,7 @@
         </div>
       </div>
 
-      <a href="" class="scrollup"><i class="fa fa-chevron-up"></i></a>
-
+      <a href="https://wa.me/message/VGJ6IV2WRVFIB1" class="scrollup"> <img src="img/whatsapp.png"> </a>
 
     </div>
   </footer>
