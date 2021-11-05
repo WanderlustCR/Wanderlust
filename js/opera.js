@@ -1,4 +1,7 @@
 const taskForm = document.getElementById('Tours');
+const select = document.getElementById('Serch');
+const dirT = document.getElementById('DireccionT');
+
 
 function canopy(){
   taskForm.innerHTML = `<div class="row">
@@ -632,11 +635,11 @@ function TortugaIsland(){
     <div class="content">
       <div class="grid">
         <figure class="effect-zoe">
-          <img src="img/Tortuga/tortuga.jpg" width="560" height="366" alt="img25" />
+          <img src="img/Tortuga/Tortuga.jpg" width="560" height="366" alt="img25" />
         </figure>
 
         <figure class="effect-zoe">
-          <img src="img/Tortuga/tortuga2.jpg" width="560" height="366" alt="img25" />
+          <img src="img/Tortuga/Tortuga2.jpg" width="560" height="366" alt="img25" />
         </figure>
       </div>
     </div>`
@@ -1156,14 +1159,17 @@ function SeisEnUno(){
 
 }
 
+
 function inicio(){
+  document.getElementById('trans').style.display = "none";
+  taskForm.style.display = "block";
   taskForm.innerHTML =`   <div class="row">
       <div class="col-md-6 col-md-offset-3">
         <div class="text-center">
           <h2>One and Half day tours</h2>
 
             <p>
-              <br>4% Value Added Taxes (VAT), must be summed up to all rates <br> From July 2021 to July 2022<br>Click the name to see more information.
+              <br>4% Value Added Taxes (VAT), must be summed up to all rates <br> From July 2021 to July 2022<br><strong>Click the name to see more information<strong>.
           </p>
         </div>
         <hr>
@@ -1324,6 +1330,12 @@ function inicio(){
     </div>
   </div>`
 }
+function trans(){
+   document.getElementById('trans').style.display = "block";
+   taskForm.style.display = "none";
+}
+
+
 
 
 taskForm.addEventListener('click',  (e) =>{	
@@ -1361,177 +1373,17 @@ taskForm.addEventListener('click',  (e) =>{
          }
 
 });
+
+function BuscarCoti(){
+  console.log("Click");
+  window.location.href="/Coti/index.html#"+document.getElementById('name').value;
+}
 //hashchange
 window.addEventListener('hashchange',(e)=>{
   const name = jQuery(location).attr('href');
+       console.log(name)
   if(name == "https://www.thewanderlustcr.com/services.html"){
-    Desaparece1.style.display = 'none';
-     taskForm.innerHTML =`   <div class="row">
-      <div class="col-md-6 col-md-offset-3">
-        <div class="text-center">
-          <h2>One and Half day tours</h2>
-
-            <p>
-              <br>4% Value Added Taxes (VAT), must be summed up to all rates <br> From July 2021 to July 2022<br>Click the name to see more information.
-          </p>
-        </div>
-        <hr>
-      </div>
-    </div>
-    <div class="content">
-    <div class="grid">
-
-         <figure class="effect-zoe">
-        <img src="img/6 in 1.jpg" alt="img25" />
-        <figcaption>
-          <h2> <span><a href="#aqui"  id="prueba"> 6 in 1</a></span></h2>
-          <p class="icon-links">$139 pp</p>
-        </figcaption>
-      </figure>
-      
-    
-       <figure class="effect-zoe">
-        <img src="img/city bus.jpg" alt="img26" />
-        <figcaption>
-          <h2><span> <a href="#">Vip City Bus</a></span></h2>
-          <p class="icon-links">$69 pp</p>
-        </figcaption>
-      </figure>
-      
-    </div>
-  </div>
-      <div class="content">
-    <div class="grid">
-      
-         <figure class="effect-zoe">
-        <img src="img/coffe tour.jpg" alt="img25" />
-        <figcaption>
-          <h2> <span><a href="#">Coffee Tour</a></span></h2>
-          <p class="icon-links">$59 - $55 pp</p>
-        </figcaption>
-      </figure>
-      
-    
-       <figure class="effect-zoe">
-        <img src="img/poas-volcano-doka-grecia-sarchi.jpg" alt="img26" />
-        <figcaption>
-          <h2><span> <a href="#">Poas,Doka,Grecia,Sarchi</a></span></h2>
-          <p class="icon-links">$67 pp</p>
-        </figcaption>
-      </figure>
-      
-    </div>
-  </div>
-      <div class="content">
-    <div class="grid">
-      
-         <figure class="effect-zoe">
-        <img src="img/Manuel Antonio na.jpg" alt="img25" />
-        <figcaption>
-          <h2> <span><a href="#">Manuel Antonio</a></span></h2>
-          <p class="icon-links">$135 pp</p>
-        </figcaption>
-      </figure>
-      
-    
-       <figure class="effect-zoe">
-        <img src="img/Irazu-Volcano-Orosi-Valley-Lankester-Garden.jpg" alt="img26" />
-        <figcaption>
-          <h2><span> <a href="#">Irazú,Orosi,Lankaster</a></span></h2>
-          <p class="icon-links">$112 pp</p>
-        </figcaption>
-      </figure>
-      
-    </div>
-  </div>
-      <div class="content">
-    <div class="grid">
-      
-         <figure class="effect-zoe">
-        <img src="img/Isla tortuga.jpg" alt="img25" />
-        <figcaption>
-          <h2> <span><a href="#">Tortuga Island Cruise</a></span></h2>
-          <p class="icon-links">$135 pp</p>
-        </figcaption>
-      </figure>
-      
-    
-       <figure class="effect-zoe">
-        <img src="img/Dinner.jpg" alt="img26" />
-        <figcaption>
-          <h2><span> <a href="#">Folklore Dinner Show</a></span></h2>
-          <p class="icon-links">$70 pp</p>
-        </figcaption>
-      </figure>
-      
-    </div>
-  </div>
-      <div class="content">
-    <div class="grid">
-      
-         <figure class="effect-zoe">
-        <img src="img/Tortuguero.jpg" alt="img25" />
-        <figcaption>
-          <h2> <span><a href="#"> Tortuguero NP</a></span></h2>
-          <p class="icon-links">$140 pp</p>
-        </figcaption>
-      </figure>
-      
-    
-       <figure class="effect-zoe">
-        <img src="img/city bus.jpg" alt="img26" />
-        <figcaption>
-          <h2><span> <a href="#">Rainforest Aerial Tram</a></span></h2>
-          <p class="icon-links">$107 pp</p>
-        </figcaption>
-      </figure>
-      
-    </div>
-  </div>
-      <div class="content">
-    <div class="grid">
-      
-         <figure class="effect-zoe">
-        <img src="img/Arenal TB.jpg" alt="img25" />
-        <figcaption>
-          <h2> <span><a href="#"> Arenal & Hot springs</a></span></h2>
-          <p class="icon-links">$162 pp</p>
-        </figcaption>
-      </figure>
-      
-    
-       <figure class="effect-zoe">
-        <img src="img/Pacuare/Pacuare.jpg" alt="img27" />
-        <figcaption>
-          <h2><span> <a href="#"> Rafting Pacuare River</a></span></h2>
-          <p class="icon-links">$99 pp</p>
-        </figcaption>
-      </figure>
-      
-    </div>
-  </div>
-      <div class="content">
-    <div class="grid">
-      
-         <figure class="effect-zoe">
-        <img src="img/combo.jpg" alt="img25" />
-        <figcaption>
-          <h2> <span><a href="#"> Combo Tour</a></span></h2>
-          <p class="icon-links">$149 pp</p>
-        </figcaption>
-      </figure>
-      
-    
-       <figure class="effect-zoe">
-        <img src="img/Canopy.jpg" alt="img26" />
-        <figcaption>
-          <h2><span> <a href="#">Rainforest canopy</a></span></h2>
-          <p class="icon-links">$96 pp</p>
-        </figcaption>
-      </figure>
-      
-    </div>
-  </div>`
+    inicio();
   }else if(name == "https://www.thewanderlustcr.com/services.html#6-in-1"){
     SeisEnUno();
   }else if(name == "https://www.thewanderlustcr.com/services.html#VIP"){
@@ -1540,15 +1392,25 @@ window.addEventListener('hashchange',(e)=>{
     Cooffee();
   }else if(name == "https://www.thewanderlustcr.com/services.html#Combo"){
     combo();
+  }else if(name == "https://www.thewanderlustcr.com/services.html#Transport"){
+    trans();
+  }else if(name == "https://www.thewanderlustcr.com/services.html#Tours"){
+    inicio();
   }
 
 });
 
 window.addEventListener('DOMContentLoaded', async (e) =>{	//DOMContentLoaded
 	//const querySnapshot = await getTask(); cada que actualiza
-   const name = jQuery(location).attr('href')
-     console.log(name)
-  if(name == "https://www.thewanderlustcr.com/services.html#6-in-1"){
+
+  dirT.style.display = "none";
+
+
+   const name = jQuery(location).attr('href');
+     console.log(name);
+     if(name == "https://www.thewanderlustcr.com/#Exito"){
+      alert("Email enviado exitosamente / Email sent successfully");
+  }else if(name == "https://www.thewanderlustcr.com/services.html#6-in-1"){
     SeisEnUno();
   }else if(name == "https://www.thewanderlustcr.com/services.html#VIP"){
     Vip();
@@ -1559,14 +1421,49 @@ window.addEventListener('DOMContentLoaded', async (e) =>{	//DOMContentLoaded
   }else{
      inicio();
   }
- 
+ var today = new Date();
+var dd = today.getDate();
+var mm = today.getMonth()+1;
+var yyyy = today.getFullYear();
+ if(dd<10){
+        dd='0'+dd
+    } 
+    if(mm<10){
+        mm='0'+mm
+    } 
+
+today = yyyy+'-'+mm+'-'+dd;
+document.getElementById("start").setAttribute("min", today);
+document.getElementById("start").setAttribute("value", today);
 
 
 
 })
 
-/*
 
 
 
-*/
+select.addEventListener('click',(e) =>{
+    dirT.style.display = "block";
+  const Pickup = document.getElementById("Pickup").value;
+  const Dropof = document.getElementById("Dropof").value;
+  const passeger = document.getElementById("passeger").value;
+  const dateT = document.getElementById("start").value;
+
+  if(Pickup == "DEPARTURE" || Dropof == "ARRIVAL" || passeger =="PASSENGER"){
+      alert("Please complete all spaces")
+  }else{  
+     if( (Pickup == "San Jose" || Pickup == "Heredia" || Pickup == "Alajuela") && (Dropof =="Heredia" || Dropof =="Alajuela" || Dropof =="San Jose")){
+    if(passeger <= 7){
+      console.log("El precio es de $50")
+    }else if(passeger <= 10 && passeger > 7){
+      console.log("El precio es de $57")
+    }
+  }
+  }
+
+
+
+ 
+});
+
