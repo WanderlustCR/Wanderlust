@@ -9,6 +9,110 @@
 		url('../fonts/feathericons/feathericons.svg?-8is7zf#feathericons') format('svg');
 }
 
+/*--------------------------------------------------------------
+# Welcome
+--------------------------------------------------------------*/
+#hero {
+  display: table;
+  width: 100%;
+  height: 100vh;
+  background: url(../img/fondo/Fondo.jpg) top center fixed;
+  background-size: cover;
+}
+
+#hero .hero-logo {
+  margin: 20px;
+}
+
+#hero .hero-logo img {
+  max-width: 100%;
+}
+
+#hero .hero-container {
+
+  display: table-cell;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  vertical-align: middle;
+}
+
+#hero h1 {//
+  margin: 30px 0 10px 0;
+  font-weight: 700;
+  line-height: 48px;
+  text-transform: uppercase;
+  color: #64a624;
+}
+#hero input{
+	margin-top: 20px;
+	width: 40%;
+	margin-bottom: 20px;
+	font-weight: 1000;
+} 
+
+@media (max-width: 768px) {
+  #hero h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+}
+
+#hero h2 {
+  color: #999;
+  margin-bottom: 50px;
+}
+
+@media (max-width: 768px) {
+  #hero h2 {
+    font-size: 24px;
+    line-height: 26px;
+    margin-bottom: 30px;
+  }
+  #hero h2 .rotating {
+    display: block;
+  }
+}
+
+#hero .rotating > .animated {
+  display: inline-block;
+}
+
+#hero .actions a {
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 20px;
+  border-radius: 2px;
+  transition: 0.5s;
+  margin: 10px;
+}
+
+#hero .btn-get-started {
+  background: #A6D678;
+  border: 2px solid #03C4EB;
+  color: #fff;
+}
+
+#hero .btn-get-started:hover {
+  background: none;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+#hero .btn-services {
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+#hero .btn-services:hover {
+  background: #03C4EB;
+  border: 2px solid #03C4EB;
+}
+
 .btnReserv{
 	vertical-align: middle;
 }
@@ -22,7 +126,7 @@
 text-align: center;
   font-weight: bolder;
   font-size: 25px;
-  color: #0db4be;
+  color: #64a624;
 }
 
 .titulo-trans span{
@@ -76,6 +180,14 @@ text-align: center;
     width:25%;
     padding: 1px;
 
+}
+
+.ifrevista{
+	justify-content: center;
+	align-items: center;
+	margin-top: 50px;
+  height: 80vh;
+  width: 100%;
 }
 
 
@@ -285,6 +397,8 @@ figure.effect-sadie:hover h2 {
 	-webkit-transform: translate3d(0,-50%,0) translate3d(0,-40px,0);
 	transform: translate3d(0,-50%,0) translate3d(0,-40px,0);
 }
+
+
 
 figure.effect-sadie:hover figcaption::before ,
 figure.effect-sadie:hover p {
@@ -1228,3 +1342,130 @@ figure.effect-chico:hover p {
 		width: 100%;
 	}
 }
+
+
+
+
+/**/
+#hero1{
+ background:url(../img/Slider/perezoso.png);
+  background-size:cover;
+  background-position:center center;
+  background-attachment:fixed;
+
+}
+#hero2{
+	background:url(../img/Slider/Volcan.png);
+  background-size:cover;
+  background-position:center center;
+  background-attachment:fixed;
+}
+.hero1, .content{
+  text-align:center; 
+  position:relative;
+  width: 100%;
+}
+
+.hero2, .content{
+  text-align:center; 
+  position:relative;
+  width: 100%;
+}
+
+.inner {
+ 
+}
+
+.hero1 .inner{
+	 min-height:600px;
+  position: relative;
+ }
+
+ .hero2 .inner{
+ min-height:300px;
+  position: relative;
+ }
+
+
+.hero1 .copy {
+	left: 25%;
+	position:absolute; 
+  top:50%; 
+  height:20em; 
+  margin-top:-5em; 
+  width:60%;
+  justify-content: center;
+  display: inline;
+}
+
+.hero1 h2, .hero p{ 
+}
+
+
+.hero2 h2, .hero2 p{ 
+	color:white;
+}
+
+.content h2 {
+  color:white;
+}
+.content p {
+	color:#D4D2D2;
+}
+
+.hero1 h2{
+  margin:0px;
+  font-family: 'Roboto Slab', serif;
+  font-weight:900;
+  font-size:32px;
+  padding:0px 20px;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+.hero1 p{
+  font-family: 'Noto Sans', sans-serif; 
+  font-size:14px;
+  padding:0px 20px;
+}
+
+.hero2 h2{
+  margin:0px;
+  font-family: 'Roboto Slab', serif;
+  font-weight:900;
+  font-size:40px;
+  padding:0px 20px;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+.hero2 p{
+  font-family: 'Noto Sans', sans-serif; 
+ color:#D8DED8;
+  font-size:25px;
+  padding:0px 20px;
+}
+
+.btnBuscar{
+	margin-top: 50px;
+	font-size: calc(1em + 1vw);
+	line-height: 1em;
+	width: 30%;
+	height: 30%;
+	float: right;
+  text-align: left;
+  display: inline;
+}
+
+.home{
+	float: left;
+  text-align: left;
+  display: inline;
+	font-size: calc(1em + 1vw);
+line-height: 1em;
+	margin-top: 50px;
+	width: 70%;
+	height: 30%;
+}
+
+
