@@ -1373,6 +1373,11 @@ taskForm.addEventListener('click',  (e) =>{
          }
 
 });
+
+function BuscarCoti(){
+  console.log("Click");
+  window.location.href="/Coti/index.html#"+document.getElementById('name').value;
+}
 //hashchange
 window.addEventListener('hashchange',(e)=>{
   const name = jQuery(location).attr('href');
@@ -1401,9 +1406,11 @@ window.addEventListener('DOMContentLoaded', async (e) =>{	//DOMContentLoaded
   dirT.style.display = "none";
 
 
-   const name = jQuery(location).attr('href')
-     console.log(name)
-  if(name == "https://www.thewanderlustcr.com/services.html#6-in-1"){
+   const name = jQuery(location).attr('href');
+     console.log(name);
+     if(name == "https://www.thewanderlustcr.com/#Exito"){
+      alert("Email enviado exitosamente / Email sent successfully");
+  }else if(name == "https://www.thewanderlustcr.com/services.html#6-in-1"){
     SeisEnUno();
   }else if(name == "https://www.thewanderlustcr.com/services.html#VIP"){
     Vip();
@@ -1460,8 +1467,3 @@ select.addEventListener('click',(e) =>{
  
 });
 
-/*
-
-
-
-*/
