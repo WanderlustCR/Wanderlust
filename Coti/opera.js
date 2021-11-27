@@ -23,7 +23,8 @@ window.addEventListener('DOMContentLoaded',(e)=>{
     var split = name.slice(48);
     console.log(split);
     document.getElementById('task-id').value = split;
-
+    btn.style.display = "none";
+     BuscarCliente();
 
 })
 
@@ -89,7 +90,7 @@ async function  BuscarCliente() {
              await onGetTask();
             if(exite == 1){
                
-                btn.style.display = "none";
+                
                 onGetTask((querySnapshot) =>{
                 querySnapshot.forEach(doc => {
                   Servicios.innerHTML += ` <td class="service">${doc.data().ID}</td>
