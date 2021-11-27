@@ -24,9 +24,20 @@ window.addEventListener('DOMContentLoaded',(e)=>{
     console.log(split);
     document.getElementById('task-id').value = split;
     btn.style.display = "none";
+    generateQr();
      BuscarCliente();
 
+
 })
+
+function generateQr(){
+    let size = "1000x1000";
+    let data = document.getElementById('task-id').value;
+    let baseURL = "https://api.qrserver.com/v1/create-qr-code/";
+    let url = `${baseURL}?data=${data}&size=${size}`;
+
+    document.getElementById('qr').src = url;
+}
 
 const onGetTask = (callback) => db.collection(" Tours/collection/"+ID).onSnapshot(callback); //En vivo
 const onGetTask2 = (callback) => db.collection("Clientes").onSnapshot(callback); //En vivo
