@@ -33,7 +33,7 @@ window.addEventListener('DOMContentLoaded',(e)=>{
 function generateQr(){
     document.getElementById('task-id').style.display = 'block';
     let size = "1000x1000";
-    let data =  window.location.href;
+    let data = window.location.href + "#"+document.getElementById('task-id').value;
     let baseURL = "https://api.qrserver.com/v1/create-qr-code/";
     let url = `${baseURL}?data=${data}&size=${size}`;
 
