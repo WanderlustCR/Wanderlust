@@ -18,21 +18,20 @@ window.addEventListener('DOMContentLoaded',(e)=>{
    document.getElementById('task-id').style.display = 'none';
     var name = window.location.href;
     name = name.replace("?", "#");
-     //btn.style.display = 'none';
     //var split = name.slice(47);
     console.log(name);
     var split = name.slice(48);
     console.log(split);
     document.getElementById('task-id').value = split;
     btn.style.display = "none";
-    generateQr();
-     BuscarCliente();
+    document.getElementById('qr').style.display = 'none';
+     //BuscarCliente();
 
 
 })
 
 function generateQr(){
-    document.getElementById('task-id').style.display = 'block';
+    document.getElementById('qr').style.display = 'block';
     let size = "1000x1000";
     let data = "'https://www.thewanderlustcr.com/Coti/index.html?"+document.getElementById('task-id').value ;
     let baseURL = "https://api.qrserver.com/v1/create-qr-code/";
@@ -78,33 +77,42 @@ async function  BuscarCliente() {
  
             await onGetTask2();
             project.innerHTML =``;
-            onGetTask2 ((querySnapshot)=>{
+            await Busqueda();  
+                     
+ }
+}
+
+
+async function Busqueda(){
+    onGetTask2 ((querySnapshot)=>{
                 querySnapshot.forEach(doc=>{
-                if(doc.data().Tours == ID){
-                    project.innerHTML = `<div><span>Servicio</span> Tours and shuttles</div>
-                    <div><span>CLIENT</span> ${doc.data().Name}</div>
-                    <div><span>Niños</span> ${doc.data().Nino}</div>
-                    <div><span>Adultos</span> ${doc.data().Adulto}</div>`;
-                    if(doc.data().estado == true){
-                         project.innerHTML += `<div><span>Estado</span>Aceptado</div>`;
-                    }else{
-                         project.innerHTML += `<div><span>Estado</span>Cancelado</div>`;
+                    if(doc.data().Tours == ID){
+                        project.innerHTML = `<div><span>Servicio</span> Tours and shuttles</div>
+                        <div><span>CLIENT</span> ${doc.data().Name}</div>
+                        <div><span>Niños</span> ${doc.data().Nino}</div>
+                        <div><span>Adultos</span> ${doc.data().Adulto}</div>`;
+                        if(doc.data().estado == true){
+                             project.innerHTML += `<div><span>Estado</span>Aceptado</div>`;
+                        }else{
+                             project.innerHTML += `<div><span>Estado</span>Cancelado</div>`;
+                        }
+                        Adulto = doc.data().Adulto;
+                        Ninos = doc.data().Nino;
+                        IVA = doc.data().iva;
+                        Aceptado();
+                        
                     }
-                    Adulto = doc.data().Adulto;
-                    Ninos = doc.data().Nino;
-                    IVA = doc.data().iva;
-                    exite = 0;
-                }
-
-
                 })
-               
+                   
             })
-             await onGetTask();
-            if(exite == 1){
-               
-                
-                onGetTask((querySnapshot) =>{
+}
+
+async function Aceptado(){
+
+    generateQr();
+
+    await onGetTask();
+     onGetTask((querySnapshot) =>{
                 querySnapshot.forEach(doc => {
                   Servicios.innerHTML += ` <td class="service">${doc.data().ID}</td>
                         <td class="desc">${doc.data().Description}</td>
@@ -138,12 +146,6 @@ async function  BuscarCliente() {
                       Precio = 0;
                     })
 
-            }else{
-                 alert("No existe el ID ingresado");
-                window.location.href = 'https://www.thewanderlustcr.com/index.html';
-   
-            }
- }
 }
 
 
