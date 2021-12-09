@@ -25,7 +25,7 @@ window.addEventListener('DOMContentLoaded',(e)=>{
     document.getElementById('task-id').value = split;
     btn.style.display = "none";
     document.getElementById('qr').style.display = 'none';
-     //BuscarCliente();
+     BuscarCliente();
 
 
 })
