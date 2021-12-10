@@ -13,16 +13,18 @@
   <link rel="stylesheet" href="css/animate.css">
   <link rel="stylesheet" href="css/font-awesome.min.css">
   <link rel="stylesheet" href="css/jquery.bxslider.css">
+  <link href="css/overwrite.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/normalize.css" />
   <link rel="stylesheet" type="text/css" href="css/demo.css" />
   <link rel="stylesheet" type="text/css" href="css/set1.css" />
-  <link href="css/overwrite.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/Chat.css" />
+  
   <link href="css/style.css" rel="stylesheet">
   
 </head>
 
 <body>
-  <div id="Ingles" class="Ingles">
+  <div id="Idioma" class="Idioma">
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -41,6 +43,13 @@
               <li role="presentation" class="active"><a href="index.html">Home</a></li>
               <li role="presentation"><a href="services.html">Services</a></li>
               <li role="presentation"><a href="contact.html">Contact</a></li>
+              <li role="presentation">
+                <select id="IdiomaSelect" >
+                  <option hidden selected> English </option>
+                  <option value="English">English</option>
+                  <option value="Español">Español</option>
+                </select>
+              </li>
             </ul>
           </div>
         </div>
@@ -55,7 +64,7 @@
   <div class="inner">
     <div class="copy">
     <input type="text" name="name" class="form-control home" id="name" placeholder="Your Reservation ID" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-    <button class="btn btnBuscar " onclick="BuscarCoti()">Buscar</button>
+    <button class="btn btnBuscar " onclick="BuscarCoti()">Search</button>
     </div>
   </div>
 </section>
@@ -79,10 +88,10 @@
         <div class="box">
           <div class="col-md-4">
             <div class="wow bounceIn" data-wow-offset="0" data-wow-delay="0.4s">
-              <h4>Experience</h4>
               <div class="icon">
                 <i class="fa fa-heart-o fa-3x"></i>
               </div>
+              <h4>Experience</h4>
               <p>Wanderlust brings you the best experience on your trip</p>
               <div class="ficon">
               </div>
@@ -91,10 +100,11 @@
 
           <div class="col-md-4">
             <div class="wow bounceIn" data-wow-offset="0" data-wow-delay="1.0s">
-              <h4>Easy access</h4>
+              
               <div class="icon">
                 <i class="fa fa-desktop fa-3x"></i>
               </div>
+              <h4>Easy access</h4>
               <p>Check your itinerary online, see our destinations and enjoy</p>
               <div class="ficon">
               </div>
@@ -103,10 +113,11 @@
 
           <div class="col-md-4">
             <div class="wow bounceIn" data-wow-offset="0" data-wow-delay="1.6s">
-              <h4>Always on time</h4>
+              
               <div class="icon">
                 <i class="fa fa-location-arrow fa-3x"></i>
               </div>
+              <h4>Always on time</h4>
               <p>Do you only have one day? We will make sure you take advantage of every minute</p>
               <div class="ficon">
               </div>
@@ -121,19 +132,22 @@
     <section id="hero2" class="hero2">
   <div class="inner">
     <div class="copy">
-       <div class="col-md-3">
-           <img src="img/logo.svg" alt="img25" width="400.2" height="250.25" />
-        </div>
-              <h2>About us</h2>
+        <div class="container">
+          <div class="row">
+             <h2>About us</h2>
               
               <p>At Wanderlust we believe in providing more than a transportation service, providing a
-                experience, so for us all our clients are VIPs. <br> Our
+                experience, so for us all our clients are VIPs. </p>
+                <p> Our
                 drivers know the main tourist and social points of
                 our country and they are always ready to evacuate any doubt or curiosity
                 that you, as our client could have, as well as pleasing you with the necessary stops
                 to satisfy your needs, either just go
-                to the bathroom, buy something, or take pictures. <br>
+                to the bathroom, buy something, or take pictures. 
               </p>
+          </div>
+        </div>
+             
     </div>
   </div>
 </section>
@@ -143,10 +157,12 @@
         <div class="col-md-6 col-md-offset-3">
           <div class="text-center">
             <h2>Most popular</h2>
-              <p>
+            <div id="TextInfo"><p>
                 <br>4% Value Added Taxes (VAT), must be summed up to all rates <br> From July 2021 to July 2022<br> 
                 <strong>Click the name to see more information.</strong> 
             </p>
+          </div>
+              
           </div>
           <hr>
         </div>
@@ -195,6 +211,59 @@
           <a class="btn btn-primary btn-lg" href="services.html">more</a>
         </div>
     </div>
+
+      <div id="live-chat">
+    
+    <header class="clearfix">
+      
+      
+
+      <h4 class="ChatName">Wanderlust Costa Rica</h4>
+
+      <span class="chat-message-counter">1</span>
+
+    </header>
+
+    <div class="chat">
+      
+      <div class="chat-history">
+        
+        <div class="chat-message clearfix">
+          
+          <img src="http://gravatar.com/avatar/2c0ad52fc5943b78d6abe069cc08f320?s=32" alt="" width="32" height="32">
+
+          <div class="chat-message-content clearfix">
+            
+            <span class="chat-time"></span>
+
+            <h5>Wanderlust Costa Rica</h5>
+
+            <p>Hello👋 </p>  
+            <p>How can I help you? </p>
+          </div> <!-- end chat-message-content -->
+
+        </div> <!-- end chat-message -->
+
+      </div> <!-- end chat-history -->
+
+      <form action="#" method="post" id="FormChat">
+
+        <fieldset>
+          <div id="btnChat" class="btnChat">
+          <input id="mensaje" type="text" class="imp" placeholder="Enter para enviar" autofocus>
+          </div>
+          
+          <input type="hidden">
+
+        </fieldset>
+
+      </form>
+
+    </div> <!-- end chat -->
+
+  </div> <!-- end live-chat -->
+
+
     <div class="inner-footer">
         <div class="container">
           <div class="row">
@@ -203,17 +272,28 @@
               <a href="mailto:info@thewanderlustcr.com">
                 <p><i class="fa fa-envelope"></i> info@thewanderlustcr.com</p>
               </a>
-              <p><i class="fa fa-phone"></i> +506 6167 2539</p>
+              <a href="https://www.facebook.com/qr/4694313090628074">
+                <p><i class="fa fa-facebook"></i> Wanderlust Costa Rica</p>
+              </a>
+              <a href="https://instagram.com/wanderlust_costa_rica?utm_medium=copy_link">
+                <p><i class="fa fa-instagram"></i> wanderlust_costa_rica</p>
+              </a>
+              <a href="https://wa.me/50661672539">
+                <p><i class="fa fa-phone"></i> +506 6167 2539</p>
+              </a>
+              
             </div>
           </div>
         </div>
     </div>
+    
 </div>
 
   
  
 
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
   <script src="js/jquery-2.1.1.min.js"></script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->
   <script src="js/bootstrap.min.js"></script>
@@ -222,8 +302,11 @@
   <script src="js/jquery.isotope.min.js"></script>
   <script src="js/jquery.bxslider.min.js"></script>
   <script type="text/javascript" src="js/fliplightbox.min.js"></script>
+  <script src="js/Chat.js"></script>
+  <script src="js/Chat2.js"></script>
   <script src="js/functions.js"></script>
   <script src="js/Bs.js"></script>
+  <script src="js/Idioma.js"></script>
   <script type="text/javascript">
     $('.portfolio').flipLightBox()
   </script>
@@ -239,7 +322,7 @@
       </div>
      
 
-      <a href="https://wa.me/message/VGJ6IV2WRVFIB1" class="scrollup"> <img src="img/whatsapp.png"> </a>
+
 
 
     </div>

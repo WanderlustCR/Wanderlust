@@ -17,44 +17,45 @@
   <link rel="stylesheet" type="text/css" href="css/normalize.css" />
   <link rel="stylesheet" type="text/css" href="css/demo.css" />
   <link rel="stylesheet" type="text/css" href="css/set1.css" />
+    <link rel="stylesheet" type="text/css" href="css/Chat.css" />
   <link href="css/overwrite.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
   
 </head>
 
 <body>
-  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <div class="container">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse.collapse">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-        <a class="navbar-brand" href="contact.html"><span>The Wanderlust CR</span></a>
-      </div>
-      <div class="navbar-collapse collapse">
-        <div class="menu">
-          <ul class="nav nav-tabs" role="tablist">
-            <li role="presentation"><a href="index.html">Home</a></li>
-            <li role="presentation"><a href="services.html">Services</a></li>
-            <li role="presentation" class="active"><a href="contact.html">Contact</a></li>
-          </ul>
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse.collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html"><span>The Wanderlust CR</span></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <div class="menu">
+            <ul class="nav nav-tabs" role="tablist">
+              <li role="presentation" ><a href="index.html">Home</a></li>
+              <li role="presentation"><a href="services.html">Services</a></li>
+              <li role="presentation" class="active"><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-  </nav>
+    </nav>
 
   
 
-  <section id="contact-page">
+<section id="contact-page">
     <div class="container">
       <div class="center">
         <h2>Contact Us</h2>
         <h2>Contact Us</h2>
-        <p>Send us a message and we will contact you soon </p>
+        <p>Let us know the details and we will contact you soon </p>
       </div>
 
 
@@ -62,7 +63,7 @@
         <input type="hidden" name="_captcha" value="false">
         <input type="hidden" name="_next" value="https://www.thewanderlustcr.com/#Exito">
         <div class="form-group">
-              <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars"required />
+              <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:3" data-msg="Please enter at least 4 chars"required />
               <div class="validation"></div>
             </div>
         <div class="form-group">
@@ -70,16 +71,84 @@
               <div class="validation"></div>
             </div>
          <div class="form-group">
-              <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+              <input type="text" class="form-control" name="Pick" id="Pick" placeholder="Pick up" data-rule="minlen:4"  data-msg="Please enter a valid Pick up place" required/>
               <div class="validation"></div>
             </div>
-       <div class="text-center" id="confirmacion"><button type="submit" class="btn btn-primary btn-lg">confirmation</button></div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="Drop" id="Drop" placeholder="Drop off" data-rule="minlen:4"   data-msg="Please enter a valid Drop off place" required/>
+              <div class="validation"></div>
+            </div>
+            <div class="form-group">
+              <input type="date" class="form-control" name="Date" id="start" placeholder="Drop off" data-rule="date"  data-msg="Please enter a valid date" required/>
+              <div class="validation"></div>
+            </div>
+            <div class="form-group">
+              <input type="number" class="form-control" name="number" id="number" placeholder="PAX" data-rule="date"  data-msg="Please enter a valid number" required/>
+              <div class="validation"></div>
+            </div>
+            <div class="form-group">
+              <textarea type="text" class="form-control" name="Description" id="Description" placeholder="Description" data-rule="minlen:4"  data-msg="Please enter a valid description" required></textarea>
+              <div class="validation"></div>
+            </div>
+
+       <div class="text-center" id="confirmacion"><button type="submit" class="btn btn-primary btn-lg">Send</button></div>
     </form>
       <!--/.row-->
     </div>
     <!--/.container-->
   </section>
-  <!--/#contact-page-->
+
+
+     <div id="live-chat">
+    
+    <header class="clearfix">
+      
+      
+
+      <h4 class="ChatName">Wanderlust Costa Rica</h4>
+
+      <span class="chat-message-counter">1</span>
+
+    </header>
+
+    <div class="chat">
+      
+      <div class="chat-history">
+        
+        <div class="chat-message clearfix">
+          
+          <img src="http://gravatar.com/avatar/2c0ad52fc5943b78d6abe069cc08f320?s=32" alt="" width="32" height="32">
+
+          <div class="chat-message-content clearfix">
+            
+            <span class="chat-time"></span>
+
+            <h5>Wanderlust Costa Rica</h5>
+
+            <p>Hello👋 </p>  
+            <p>How can I help you? </p>
+          </div> <!-- end chat-message-content -->
+
+        </div> <!-- end chat-message -->
+
+      </div> <!-- end chat-history -->
+
+      <form action="#" method="post" id="FormChat">
+
+        <fieldset>
+          <div id="btnChat" class="btnChat">
+          <input id="mensaje" type="text" class="imp" placeholder="Enter para enviar" autofocus>
+          </div>
+          
+          <input type="hidden">
+
+        </fieldset>
+
+      </form>
+
+    </div> <!-- end chat -->
+
+  </div> <!-- end live-chat -->
 
   
 
@@ -122,20 +191,30 @@
   firebase.analytics();
 </script>
 <script src="contactform/contactform.js"></script>
+  <script src="js/Chat.js"></script>
+  <script src="js/Chat2.js"></script>
 </body>
 <footer>
     <div class="inner-footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4 f-contact">
-            <h3 class="widgetheading">Contact Us</h3>
-            <a href="mailto:info@thewanderlustcr.com">
-              <p><i class="fa fa-envelope"></i> info@thewanderlustcr.com</p>
-            </a>
-            <p><i class="fa fa-phone"></i> +506 6167 2539</p>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 f-contact">
+              <h3 class="widgetheading">Contact Us</h3>
+              <a href="mailto:info@thewanderlustcr.com">
+                <p><i class="fa fa-envelope"></i> info@thewanderlustcr.com</p>
+              </a>
+              <a href="https://www.facebook.com/qr/4694313090628074">
+                <p><i class="fa fa-facebook"></i> Wanderlust Costa Rica</p>
+              </a>
+              <a href="https://instagram.com/wanderlust_costa_rica?utm_medium=copy_link">
+                <p><i class="fa fa-instagram"></i> wanderlust_costa_rica</p>
+              </a>
+              <a href="https://wa.me/50661672539">
+                <p><i class="fa fa-phone"></i> +506 6167 2539</p>
+              </a>
+            </div>
           </div>
         </div>
-      </div>
     </div>
 
 
@@ -148,7 +227,6 @@
         </div>
       </div>
 
-      <a href="https://wa.me/message/VGJ6IV2WRVFIB1" class="scrollup"> <img src="img/whatsapp.png"> </a>
 
     </div>
   </footer>
