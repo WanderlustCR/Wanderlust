@@ -2094,7 +2094,7 @@ function BuscarCoti(){
 window.addEventListener('hashchange',(e)=>{
   const name = jQuery(location).attr('href');
        console.log(name)
-  if(name == "https://www.thewanderlustcr.com/services.html"){
+  if(name == "https://www.thewanderlustcr.com/Servicio.html"){
     inicio();
   }else if(name == "https://www.thewanderlustcr.com/Espa%C3%B1ol/Servicio.html#6-in-1"){
     SeisEnUno();
@@ -2106,7 +2106,7 @@ window.addEventListener('hashchange',(e)=>{
     combo();
   }else if(name == "https://www.thewanderlustcr.com/Espa%C3%B1ol/Servicio.html#Transport"){
     //trans();
-  }else if(name == "https://www.thewanderlustcr.com/Espa%C3%B1ol/Servicio.html#Tours"){
+  }else if(name == "https://www.thewanderlustcr.com/Espa%C3%B1ol/Servicio.html"){
     inicio();
   }
 
