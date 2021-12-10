@@ -1,5 +1,7 @@
 function BuscarCoti(){
-  window.location.href="Coti/index.html#"+document.getElementById('name').value;
+  
+  window.location.replace("https://www.thewanderlustcr.com/Coti/index.html#"+document.getElementById('name').value);
+
 }
 
 window.addEventListener('DOMContentLoaded', async (e) =>{ //DOMContentLoaded
