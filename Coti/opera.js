@@ -25,7 +25,7 @@ window.addEventListener('DOMContentLoaded',(e)=>{
     document.getElementById('task-id').value = split;
     btn.style.display = "none";
     document.getElementById('qr').style.display = 'none';
-     BuscarCliente();
+    BuscarCliente();
 
 
 })
@@ -99,19 +99,25 @@ async function Busqueda(){
                         Adulto = doc.data().Adulto;
                         Ninos = doc.data().Nino;
                         IVA = doc.data().iva;
-                        Aceptado();
+                        
                         
                     }
                 })
                    
             })
+    Aceptado();
 }
 
 async function Aceptado(){
 
     generateQr();
-
-    await onGetTask();
+    try{
+         await onGetTask();
+    }catch(error){
+        console.log(error);
+    window.location.href = 'https://www.thewanderlustcr.com/index.html';
+    }
+   
      onGetTask((querySnapshot) =>{
                 querySnapshot.forEach(doc => {
                   Servicios.innerHTML += ` <td class="service">${doc.data().ID}</td>
