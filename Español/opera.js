@@ -2095,17 +2095,17 @@ window.addEventListener('hashchange',(e)=>{
        console.log(name)
   if(name == "https://www.thewanderlustcr.com/services.html"){
     inicio();
-  }else if(name == "https://www.thewanderlustcr.com/Español/Servicio.html#6-in-1"){
+  }else if(name == "https://www.thewanderlustcr.com/Espa%C3%B1ol/Servicio.html#6-in-1"){
     SeisEnUno();
-  }else if(name == "https://www.thewanderlustcr.com/Español/Servicio.html#VIP"){
+  }else if(name == "https://www.thewanderlustcr.com/Espa%C3%B1ol/Servicio.html#VIP"){
     Vip();
-  }else if(name == "https://www.thewanderlustcr.com/Español/Servicio.html#coffee"){
+  }else if(name == "https://www.thewanderlustcr.com/Espa%C3%B1ol/Servicio.html#coffee"){
     Cooffee();
-  }else if(name == "https://www.thewanderlustcr.com/Español/Servicio.html#Combo"){
+  }else if(name == "https://www.thewanderlustcr.com/Espa%C3%B1ol/Servicio.html#Combo"){
     combo();
-  }else if(name == "https://www.thewanderlustcr.com/Español/Servicio.html#Transport"){
+  }else if(name == "https://www.thewanderlustcr.com/Espa%C3%B1ol/Servicio.html#Transport"){
     //trans();
-  }else if(name == "https://www.thewanderlustcr.com/Español/Servicio.html#Tours"){
+  }else if(name == "https://www.thewanderlustcr.com/Espa%C3%B1ol/Servicio.html#Tours"){
     inicio();
   }
 
@@ -2117,13 +2117,13 @@ window.addEventListener('DOMContentLoaded', async (e) =>{ //DOMContentLoaded
      console.log(name);
      if(name == "https://www.thewanderlustcr.com/#Exito"){
       alert("Email enviado exitosamente / Email sent successfully");
-  }else if(name == "https://www.thewanderlustcr.com/Español/Servicio.html#6-in-1"){
+  }else if(name == "https://www.thewanderlustcr.com/Espa%C3%B1ol/Servicio.html#6-in-1"){
     SeisEnUno();
-  }else if(name == "https://www.thewanderlustcr.com/Español/Servicio.html#VIP"){
+  }else if(name == "https://www.thewanderlustcr.com/Espa%C3%B1ol/Servicio.html#VIP"){
     Vip();
-  }else if(name == "https://www.thewanderlustcr.com/Español/Servicio.html#coffee"){
+  }else if(name == "https://www.thewanderlustcr.com/Espa%C3%B1ol/Servicio.html#coffee"){
     Cooffee();
-  }else if(name == "https://www.thewanderlustcr.com/Español/Servicio.html#Combo"){
+  }else if(name == "https://www.thewanderlustcr.com/Espa%C3%B1ol/Servicio.html#Combo"){
     combo();
   }else{
     inicio();
