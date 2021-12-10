@@ -1,6 +1,478 @@
 const taskForm = document.getElementById('Tours');
+const trans = document.getElementById('trans');
+
 const select = document.getElementById('Serch');
-const dirT = document.getElementById('DireccionT');
+
+function Pack(){
+  var today = new Date();
+var dd = today.getDate();
+var mm = today.getMonth()+1;
+var yyyy = today.getFullYear();
+ if(dd<10){
+        dd='0'+dd
+    } 
+    if(mm<10){
+        mm='0'+mm
+    } 
+
+today = yyyy+'-'+mm+'-'+dd;
+
+  taskForm.innerHTML = ``;
+   trans.innerHTML = ``;
+   trans.innerHTML = `<section id="contact-page">
+    <div class="container">
+      <div class="center">
+
+        <h2>Let us create a personalized itinerary for you </h2>
+        <p>Let us know the details and we will contact you soon </p>
+      </div>
+
+
+      <form action="https://formsubmit.co/info@thewanderlustcr.com" method="POST">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://www.thewanderlustcr.com/#Exito">
+        <div class="form-group">
+              <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:3" data-msg="Please enter at least 4 chars"required />
+              <div class="validation"></div>
+            </div>
+        <div class="form-group">
+              <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" required/>
+              <div class="validation"></div>
+            </div>
+         <div class="form-group">
+              <input type="text" class="form-control" name="Pick" id="Pick" placeholder="Pick up" data-rule="minlen:4"  data-msg="Please enter a valid Pick up place" required/>
+              <div class="validation"></div>
+            </div>
+            <div class="form-group">
+              <input type="number" class="form-control" name="Days" id="Drop" placeholder="How long would you stay with us?" data-msg="Please enter a valid number" required/>
+              <div class="validation"></div>
+            </div>
+            <div class="form-group">
+              <input type="date" class="form-control" name="Date" id="start" data-rule="date"  data-msg="Please enter a valid date" required/>
+              <div class="validation"></div>
+            </div>
+            <div class="form-group">
+              <input type="number" class="form-control" name="number" id="number" placeholder="Pax" data-rule="numer"  data-msg="Please enter a valid date" required/>
+              <div class="validation"></div>
+            </div>
+            <div class="form-group">
+              <textarea type="text" class="form-control" name="Description" id="Description" placeholder="Wich activities you prefer to do" data-rule="minlen:4"  data-msg="Please enter a valid description" required></textarea>
+              <div class="validation"></div>
+            </div>
+
+       <div class="text-center" id="confirmacion"><button type="submit" class="btn btn-primary btn-lg">send</button></div>
+    </form>
+      <!--/.row-->
+    </div>
+    <!--/.container-->
+  </section>`;
+  document.getElementById("start").setAttribute("min", today);
+    document.getElementById("start").setAttribute("value", today);
+}
+
+function rentACar(){
+    var today = new Date();
+var dd = today.getDate();
+var mm = today.getMonth()+1;
+var yyyy = today.getFullYear();
+ if(dd<10){
+        dd='0'+dd
+    } 
+    if(mm<10){
+        mm='0'+mm
+    } 
+
+today = yyyy+'-'+mm+'-'+dd;
+
+  taskForm.innerHTML = ``;
+   trans.innerHTML = ``;
+   trans.innerHTML = `<section id="contact-page">
+    <div class="container">
+      <div class="center">
+
+        <h2>Find your ideal car </h2>
+        <p>Let us know the details and we will contact you soon </p>
+      </div>
+
+
+      <form action="https://formsubmit.co/info@thewanderlustcr.com" method="POST">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://www.thewanderlustcr.com/#Exito">
+        <div class="form-group">
+              <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:3" data-msg="Please enter at least 4 chars"required />
+              <div class="validation"></div>
+            </div>
+        <div class="form-group">
+              <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" required/>
+              <div class="validation"></div>
+            </div>
+         <div class="form-group">
+              <input type="text" class="form-control" name="Pick" id="Pick" placeholder="Pick up" data-rule="minlen:4"  data-msg="Please enter a valid Pick up place" required/>
+              <div class="validation"></div>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="Drop" id="Drop" placeholder="Automatic / Manual or Both " data-rule="minlen:3"   data-msg="Please enter a valid Drop off place" required/>
+              <div class="validation"></div>
+            </div>
+            <div class="form-group">
+              <input type="date" class="form-control" name="Date" id="start"  data-rule="date"  data-msg="Please enter a valid date" required/>
+              <div class="validation"></div>
+            </div>
+            <div class="form-group">
+              <input type="number" class="form-control" name="number" id="number" placeholder="Pax" data-rule="numer"  data-msg="Please enter a valid date" required/>
+              <div class="validation"></div>
+            </div>
+
+       <div class="text-center" id="confirmacion"><button type="submit" class="btn btn-primary btn-lg">send</button></div>
+    </form>
+      <!--/.row-->
+    </div>
+    <!--/.container-->
+  </section>`;
+  document.getElementById("start").setAttribute("min", today);
+    document.getElementById("start").setAttribute("value", today);
+}
+
+
+
+function Trasnport(){
+  var today = new Date();
+var dd = today.getDate();
+var mm = today.getMonth()+1;
+var yyyy = today.getFullYear();
+ if(dd<10){
+        dd='0'+dd
+    } 
+    if(mm<10){
+        mm='0'+mm
+    } 
+
+today = yyyy+'-'+mm+'-'+dd;
+
+  taskForm.innerHTML = ``;
+   trans.innerHTML = ``;
+  trans.innerHTML +=`<div id="btn-menu" class="btn-menu">
+       <a class="btn btn-primary btn-lg" href="javascript:void(0); ">Private Transport</a>
+       <a class="btn btn-primary btn-lg" href="javascript:void(0);">Private Tours</a>
+       <a class="btn btn-primary btn-lg" href="javascript:void(0);">Shuttle</a>
+    </div>
+
+    <div id="PrivateTour">
+      <div id="PrivateTour">
+      <div class="Tit-Shut">
+      <h2>Private Tours</h2>
+      <p>4% Value Added Taxes (VAT), must be summed up to all rates from July 2021 to July 2022 </p> 
+      <p>H1 max 5 pax  -  Hiace max 10 pax </p> 
+    </div>
+    
+    <table class="table table-bordered border-primary">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Details</th>
+      <th scope="col">Price H1</th>
+      <th scope="col">Price Hiace</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>One day San Jose - Jaco</td>
+      <td>Maximum 6 hours of waiting</td>
+      <td>$214</td>
+      <td>$243</td>
+    </tr>
+    <tr>
+      <td>One day San Jose - Manuel Antonio</td>
+      <td>Maximum 6 hours of waiting</td>
+      <td>$271</td>
+      <td>$300</td>
+    </tr> 
+     <tr>
+      <td>One day San Jose - Arenal</td>
+      <td>Maximum 6 hours of waiting</td>
+      <td>$257</td>
+      <td>$286</td>
+    </tr>
+     <tr>
+      <td>One day San Jose - Monteverde</td>
+      <td>Maximum 6 hours of waiting</td>
+      <td>$279</td>
+      <td>$307</td>
+    </tr>
+    <tr>
+      <td>San Jose - Volcan Poas Tour</td>
+      <td>Entrance not include</td>
+      <td>$143</td>
+      <td>$170</td>
+    </tr>
+    <tr>
+      <td>San Jose - Doka - Volcan Poas Tour</td>
+      <td>Entrance not include</td>
+      <td>$157</td>
+      <td>$186</td>
+    </tr>
+    <tr>
+      <td>San Jose - Doka - Volcan Poas - La Paz Tour</td>
+      <td>Entrance not include</td>
+      <td>$170</td>
+      <td>$200</td>
+    </tr>
+    <tr>
+      <td>San Jose - Volcan Irazu</td>
+      <td>Entrance not include</td>
+      <td>$143</td>
+      <td>$170</td>
+    </tr>
+    <tr>
+      <td>San Jose - Volcan Irazu - Orosi & Lankaster</td>
+      <td>Entrance not include</td>
+      <td>$193</td>
+      <td>$221</td>
+    </tr>
+    <tr>
+      <td>San Jose - Volcan Irazu - ruins of Cartago & Baisilica</td>
+      <td>Entrance not include</td>
+      <td>$157</td>
+      <td>$186</td>
+    </tr>
+    <tr>
+      <td>Dinner in San Jose</td>
+      <td>3 hours of waiting</td>
+      <td>$86</td>
+      <td>$114</td>
+    </tr>
+    <tr>
+      <td>San Jose City Tour</td>
+      <td>Maximum 4 hours </td>
+      <td>$143</td>
+      <td>$170</td>
+    </tr>
+
+
+
+  </tbody>
+</table>
+<a class="btn btn-primary btn-lg" href="contact.html">Reserve</a>
+  <br>
+  
+    </div>
+    </div>
+
+    <div id="PrivateShuttle">
+      
+  <section id="contact-page">
+    <div class="container">
+      <div class="center">
+
+        <h2>Reserve the shuttle</h2>
+        <p>Let us know the details and we will contact you soon </p>
+      </div>
+
+
+      <form action="https://formsubmit.co/info@thewanderlustcr.com" method="POST">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://www.thewanderlustcr.com/#Exito">
+        <div class="form-group">
+              <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:3" data-msg="Please enter at least 4 chars"required />
+              <div class="validation"></div>
+            </div>
+        <div class="form-group">
+              <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" required/>
+              <div class="validation"></div>
+            </div>
+         <div class="form-group">
+              <input type="text" class="form-control" name="Pick" id="Pick" placeholder="Pick up" data-rule="minlen:4"  data-msg="Please enter a valid Pick up place" required/>
+              <div class="validation"></div>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="Drop" id="Drop" placeholder="Drop off" data-rule="minlen:4"   data-msg="Please enter a valid Drop off place" required/>
+              <div class="validation"></div>
+            </div>
+            <div class="form-group">
+              <input type="date" class="form-control" name="Date" id="start" placeholder="Drop off" data-rule="date"  data-msg="Please enter a valid date" required/>
+              <div class="validation"></div>
+            </div>
+            <div class="form-group">
+              <input type="number" class="form-control" name="number" id="number" placeholder="Pax" data-rule="numer"  data-msg="Please enter a valid date" required/>
+              <div class="validation"></div>
+            </div>
+
+       <div class="text-center" id="confirmacion"><button type="submit" class="btn btn-primary btn-lg">send</button></div>
+    </form>
+      <!--/.row-->
+    </div>
+    <!--/.container-->
+  </section>
+<div class="Terms-cond">
+    <hr>
+      <h2>Terms & Conditions</h2>
+      <ul>
+        <li>1 carry-on baggage</li>
+        <li>1 bag</li>
+        <li>Extra bag $10</li>
+        <li>Surfboard $10</li>
+        <li>When you pick up at the airport you have to go to the delimalinche restaurant.</li>
+      </ul>
+      <hr>
+            <h2>At the hotels in the lobby</h2>
+      <ul>
+        <li>There is a 15 minutes of posible delay for pick up at other hotels.</li>
+        <li>Reservations can be opened with a minimum of 2 pax.</li>
+        <li>But when they are less it is better to ask</li>
+        <li>If the service was opened by the site or a hotel we can sell it to you.</li>
+      </ul>
+      <hr>
+  </div>
+
+    </div>
+
+    <div id="PrivateTrans">
+      <div class="Tit-Shut">
+      <h2>Private Transport</h2>
+      <p>4% Value Added Taxes (VAT), must be summed up to all rates from July 2021 to July 2022 </p> 
+      <p>H1 max 5 pax  -  Hiace max 10 pax </p> 
+    </div>
+    
+    <table class="table table-bordered border-primary">
+  <thead>
+    <tr>
+      <th scope="col">Departure</th>
+      <th scope="col">Destination</th>
+      <th scope="col">Price H1</th>
+      <th scope="col">Price Hiace</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Airport</td>
+      <td>San Jose</td>
+      <td>$50</td>
+      <td>$57</td>
+    </tr>
+    <tr>
+      <td>San Jose</td>
+      <td>Airport</td>
+      <td>$43</td>
+      <td>$50</td>
+    </tr>
+    <tr>
+      <td>Airport / San Jose</td>
+      <td>Jaco</td>
+      <td>$143</td>
+      <td>$170</td>
+    </tr>
+    <tr>
+      <td>Airport / San Jose</td>
+      <td>Puntarenas</td>
+      <td>$143</td>
+      <td>$170</td>
+    </tr>
+    <tr>
+      <td>Airport / San Jose</td>
+      <td>Caldera</td>
+      <td>$143</td>
+      <td>$170</td>
+    </tr>
+    <tr>
+      <td>San Jose</td>
+      <td>Esterillos</td>
+      <td>$170</td>
+      <td>$200</td>
+    </tr>
+    <tr>
+      <td>San Jose</td>
+      <td>Monteverde</td>
+      <td>$186</td>
+      <td>$214</td>
+    </tr>
+    <tr>
+      <td>San Jose</td>
+      <td>Arenal</td>
+      <td>$170</td>
+      <td>$200</td>
+    </tr>
+    <tr>
+      <td>San Jose</td>
+      <td>Manuel Antonio</td>
+      <td>$186</td>
+      <td>$214</td>
+    </tr>
+    <tr>
+      <td>San Jose</td>
+      <td>Dominical</td>
+      <td>$286</td>
+      <td>$314</td>
+    </tr>
+    <tr>
+      <td>San Jose</td>
+      <td>Sierpe</td>
+      <td>$314</td>
+      <td>$357</td>
+    </tr>
+    <tr>
+      <td>San Jose</td>
+      <td>Golfito</td>
+      <td>$357</td>
+      <td>$400</td>
+    </tr>
+    <tr>
+      <td>San Jose</td>
+      <td>Puerto Viejo Limon</td>
+      <td>$286</td>
+      <td>$314</td>
+    </tr>
+    <tr>
+      <td>San Jose</td>
+      <td>Puerto Viejo Limon</td>
+      <td>$257</td>
+      <td>$286</td>
+    </tr>
+    <tr>
+      <td>San Jose</td>
+      <td>Tamarindo</td>
+      <td>$286</td>
+      <td>$314</td>
+    </tr>
+    <tr>
+      <td>San Jose</td>
+      <td>Montezuma - Santa Teresa Mal pais</td>
+      <td>$314</td>
+      <td>$343</td>
+    </tr>
+    <tr>
+      <td>San Jose</td>
+      <td>Santa Teresa - Mal pais (with transfer)</td>
+      <td>$296</td>
+      <td>$324</td>
+    </tr>
+    <tr>
+      <td>San Jose</td>
+      <td>Montezuma (with transfer)</td>
+      <td>$275</td>
+      <td>$304</td>
+    </tr>
+    <tr>
+      <td>San Jose</td>
+      <td>Santa Teresa - Mal pais (with transfer)</td>
+      <td>$296</td>
+      <td>$324</td>
+    </tr>
+
+
+
+
+  </tbody>
+</table>
+  <br>
+  <a class="btn btn-primary btn-lg" href="contact.html">Reserve</a>
+    </div>`;
+
+    document.getElementById('PrivateTour').style.display = 'none';
+    document.getElementById('PrivateShuttle').style.display = 'none';
+    document.getElementById("start").setAttribute("min", today);
+    document.getElementById("start").setAttribute("value", today);
+
+}
 
 
 function canopy(){
@@ -20,7 +492,9 @@ function canopy(){
               Walking trails lead visitors deep into the rainforest floor. Passengers will be strapped in safe top-quality gear specifically designed for this canopy tour.
 
             </p>
-            
+            <p class=izquierda>
+            <strong>What to bring?</strong> Comfortable shoes, long pants, y camera.
+            </p>
           
           <hr>
                <div class="text-center">
@@ -103,7 +577,10 @@ function combo(){
               In the natural park where we will walk through many spectacular trails which will take us to the White Magic Waterfall, the most spectacular one in the area.
 
             </p>
-            
+             </p>
+            <p class=izquierda>
+            <strong>What to bring?</strong>  Comfortable shoes, long pants, y camera.
+            </p>
           
           <hr>
                <div class="text-center">
@@ -193,7 +670,10 @@ function pacuare(){
             <p class=izquierda>
               Located in the Caribbean of Costa Rica, the Pacuare River confines the Mountain of Talamanca, the home to the native Indians of Cabecar and an immense variety of flora and fauna. Once in the river you will go 16 miles on the Heart of the rainforest, observing cascades, birds and the diversity of Flora.
             </p>
-            
+
+            <p class=izquierda>
+            <strong>What to bring?</strong>  Extra clothes, repellent, comfortable shoes, towel, sweater.
+            </p>
           
           <hr>
                <div class="text-center">
@@ -273,6 +753,10 @@ function at(){
             <p class=izquierda>
               At the hot springs near the volcano, relax in the natural heating jacuzzis, full of healthy minerals, or enjoy the additional services offered by the award-winning Tabacon Grand Spa & Thermal Resort or Baldi Hot Springs.
             </p>
+
+            <p class=izquierda>
+            <strong>What to bring?</strong>    Hat, sunscreen, swimming suit, towel and camera
+            </p>
             
           
           <hr>
@@ -346,6 +830,9 @@ function aereal(){
               This little-known world has incredible beauty and extraordinary biological diversity. The “Gondola” (Aerial Tram) Tour is a modified “Ski Lift'' that covers a distance of 2.6 kilometers through the Costa Rica rainforest. The tour lasts approximately 90 minutes. Visitors will see the different levels of a rainforest, specifically the most difficult level to reach until recently and the least scientifically known part of the forest, the canopy (the tree tops). This course is very secure and very quiet allowing visitors to listen to the many different sounds of the rainforest.
             </p>
             
+             <p class=izquierda>
+            <strong>What to bring?</strong>   Walking shoes, binoculars, raincoat and camera.
+            </p>
           
           <hr>
                <div class="text-center">
@@ -423,6 +910,10 @@ function tortuguero(){
               </p>
             <p class=izquierda>
                We will leave early and travel through the Braulio Carrillo National Park where we will pass mountains covered by dense forests as well as numerous rivers and waterfalls until we arrive at the Caribbean of Costa Rica. Here, we will cross the banana plantations to board the boat to sail to Tortuguero National Park.
+            </p>
+
+            <p class=izquierda>
+            <strong>What to bring?</strong>   Comfortable shoes, repellent, hat, binoculars, extra clothes and camera
             </p>
             
           
@@ -504,7 +995,10 @@ function Folk(){
                During our visit, the local artisans will exhibit their unique and exquisite creations that represent the different regions of the country. The evening culminates with the traditional masquerade extravaganza and a lively fireworks show. Do not miss this unforgettable experience!
             </p>
             
-          
+          <p class=izquierda>
+            <strong>What to bring?</strong>    Comfortable shoes, long pants, and camera.
+            </p>
+
           <hr>
                <div class="text-center">
         <a class="btn btn-primary btn-lg" href="contact.html">Reserve</a>
@@ -582,6 +1076,9 @@ function TortugaIsland(){
             <p class=izquierda>
                Includes: transportation, guide, light breakfast, cruise, tropical fruits, refreshments, live music and lunch. Bring: light clothing, bathing suit, towel, sunscreen lotion, hat, and camera.
             </p>
+            <p class=izquierda>
+            <strong>What to bring?</strong>    Hat, sunblock, swimming suit, towel and camera
+            </p>
             
           
           <hr>
@@ -658,7 +1155,10 @@ function IOL(){
             <p class=izquierda>
                then descend to the historic and colorful Valley of Orosi where you will have the opportunity to visit the oldest church of Costa Rica, the Colonial church of Orosi, and its town.
             </p>
-            
+
+           <p class=izquierda>
+            <strong>What to bring?</strong>    Walking shoes, binoculars, raincoat and camera
+            </p>  
           
           <hr>
                <div class="text-center">
@@ -749,6 +1249,10 @@ function ManuelAntonio(){
               One of the trails borders Cathedral Point from where the sight of the park and the sea is spectacular. On our way back to San José, we will stop at Molas Souvenir, where you could have the opportunity to get the finest Costa rican arts.
 
             </p>
+
+             <p class=izquierda>
+            <strong>What to bring?</strong>  Hat, sun block, swimming suit, towel and camera.
+            </p> 
           
           <hr>
                <div class="text-center">
@@ -830,6 +1334,10 @@ function PDGS(){
             <p class=izquierda>
               Here, see first-hand how typical oxcarts are built and painted, indulge in buying the local’s beautiful wood souvenirs!
             </p>
+
+            <p class=izquierda>
+            <strong>What to bring?</strong>   Comfortable shoes, long pants, y camera.
+            </p> 
           
           <hr>
                <div class="text-center">
@@ -920,6 +1428,10 @@ function Cooffee(){
             <p class=izquierda>
               Visit our coffee bar, order and enjoy the coffee beverage of your dreams. Browse our factory store and gift shop and allow us to ship some souvenirs and fresh coffee back to your home where they will remind you of your Costa Rican tropical adventure.
             </p>
+
+            <p class=izquierda>
+            <strong>What to bring?</strong>   Comfortable shoes, long pants, and camera.
+            </p> 
           
           <hr>
                <div class="text-center">
@@ -1002,6 +1514,10 @@ function Vip(){
             <p class=izquierda>
                Our VIP City Bus tour will take you comfortably and safely through San Jose's narrow and busy streets driving by beautiful outdoor city attractions. The living city is our museum.
             </p>
+
+            <p class=izquierda>
+            <strong>What to bring?</strong>  Comfortable shoes, long pants, y cámara
+            </p> 
           
           <hr>
                <div class="text-center">
@@ -1096,6 +1612,10 @@ function SeisEnUno(){
               region.
 
             </p>
+
+            <p class=izquierda>
+            <strong>What to bring?</strong>  Walking shoes, binoculars, raincoat and camera.
+            </p>
           
           <hr>
                <div class="text-center">
@@ -1161,7 +1681,7 @@ function SeisEnUno(){
 
 
 function inicio(){
-  document.getElementById('trans').style.display = "none";
+  trans.innerHTML = ``;
   taskForm.style.display = "block";
   taskForm.innerHTML =`   <div class="row">
       <div class="col-md-6 col-md-offset-3">
@@ -1330,18 +1850,31 @@ function inicio(){
     </div>
   </div>`
 }
-function trans(){
-   document.getElementById('trans').style.display = "block";
-   taskForm.style.display = "none";
-}
 
 
+trans.addEventListener('click' , (e)=>{
+  const name = e.target.innerHTML;
+  console.log(name);
+  if(name == "Private Transport"){
+          document.getElementById('PrivateTour').style.display = "none";
+          document.getElementById('PrivateShuttle').style.display = "none";
+          document.getElementById('PrivateTrans').style.display = "block";
+         }else if(name == "Private Tours"){
+          document.getElementById('PrivateTour').style.display = "block";
+          document.getElementById('PrivateShuttle').style.display = "none";
+          document.getElementById('PrivateTrans').style.display = "none";
+         }else if(name == "Shuttle"){
+          document.getElementById('PrivateTour').style.display = "none";
+          document.getElementById('PrivateShuttle').style.display = "block";
+          document.getElementById('PrivateTrans').style.display = "none";
+         }
+})
 
 
 taskForm.addEventListener('click',  (e) =>{	
 	//const querySnapshot = await getTask(); cada que actualiza
 	const name = e.target.innerHTML;
-
+  console.log(name);
 	if(name == " 6 in 1"){
     SeisEnUno();
 	}else if(name == "Vip City Bus"){
@@ -1362,7 +1895,7 @@ taskForm.addEventListener('click',  (e) =>{
           tortuguero();
         }else if(name == "Rainforest Aerial Tram"){
           aereal();
-        }else if(name == " Arenal & Hot springs"){
+        }else if(name == " Arenal &amp; Hot springs"){
           at();
          }else if(name == " Rafting Pacuare River"){
           pacuare();
@@ -1393,7 +1926,7 @@ window.addEventListener('hashchange',(e)=>{
   }else if(name == "https://www.thewanderlustcr.com/services.html#Combo"){
     combo();
   }else if(name == "https://www.thewanderlustcr.com/services.html#Transport"){
-    trans();
+    //trans();
   }else if(name == "https://www.thewanderlustcr.com/services.html#Tours"){
     inicio();
   }
@@ -1402,10 +1935,6 @@ window.addEventListener('hashchange',(e)=>{
 
 window.addEventListener('DOMContentLoaded', async (e) =>{	//DOMContentLoaded
 	//const querySnapshot = await getTask(); cada que actualiza
-
-  dirT.style.display = "none";
-
-
    const name = jQuery(location).attr('href');
      console.log(name);
      if(name == "https://www.thewanderlustcr.com/#Exito"){
@@ -1419,22 +1948,10 @@ window.addEventListener('DOMContentLoaded', async (e) =>{	//DOMContentLoaded
   }else if(name == "https://www.thewanderlustcr.com/services.html#Combo"){
     combo();
   }else{
-     inicio();
+    inicio();
   }
- var today = new Date();
-var dd = today.getDate();
-var mm = today.getMonth()+1;
-var yyyy = today.getFullYear();
- if(dd<10){
-        dd='0'+dd
-    } 
-    if(mm<10){
-        mm='0'+mm
-    } 
 
-today = yyyy+'-'+mm+'-'+dd;
-document.getElementById("start").setAttribute("min", today);
-document.getElementById("start").setAttribute("value", today);
+
 
 
 
@@ -1442,28 +1959,8 @@ document.getElementById("start").setAttribute("value", today);
 
 
 
-
-select.addEventListener('click',(e) =>{
-    dirT.style.display = "block";
-  const Pickup = document.getElementById("Pickup").value;
-  const Dropof = document.getElementById("Dropof").value;
-  const passeger = document.getElementById("passeger").value;
-  const dateT = document.getElementById("start").value;
-
-  if(Pickup == "DEPARTURE" || Dropof == "ARRIVAL" || passeger =="PASSENGER"){
-      alert("Please complete all spaces")
-  }else{  
-     if( (Pickup == "San Jose" || Pickup == "Heredia" || Pickup == "Alajuela") && (Dropof =="Heredia" || Dropof =="Alajuela" || Dropof =="San Jose")){
-    if(passeger <= 7){
-      console.log("El precio es de $50")
-    }else if(passeger <= 10 && passeger > 7){
-      console.log("El precio es de $57")
-    }
-  }
-  }
-
-
-
+/*
  
-});
+*/
+
 
