@@ -2087,7 +2087,8 @@ taskForm.addEventListener('click',  (e) =>{
 
 function BuscarCoti(){
   console.log("Click");
-  window.location.href="https://www.thewanderlustcr.com/Coti/index.html#"+document.getElementById('name').value;
+  window.location.replace("https://www.thewanderlustcr.com/Coti/index.html#"+document.getElementById('name').value);
+
 }
 //hashchange
 window.addEventListener('hashchange',(e)=>{
