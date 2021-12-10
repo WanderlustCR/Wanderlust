@@ -2108,8 +2108,6 @@ window.addEventListener('hashchange',(e)=>{
     //trans();
   }else if(name == "https://www.thewanderlustcr.com/Espa%C3%B1ol/Servicio.html#Tours"){
     inicio();
-  }else{
-    inicio();
   }
 
 });
