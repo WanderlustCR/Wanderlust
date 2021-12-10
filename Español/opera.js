@@ -1910,7 +1910,7 @@ function inicio(){
        <figure class="effect-zoe">
         <img src="../img/poas-volcano-doka-grecia-sarchi.jpg" alt="img26" />
         <figcaption>
-          <h2><span> <a href="#">Poas,Doka,Grecia,Sarchi</a></span></h2>
+          <h2><span> <a href="#">Poas,Doka,Grecia</a></span></h2>
           <p class="icon-links">$67 pp</p>
         </figcaption>
       </figure>
@@ -2059,7 +2059,7 @@ taskForm.addEventListener('click',  (e) =>{
           Vip();
         }else if(name == "Coffee Tour"){
           Cooffee();
-        }else if(name == "Poas,Doka,Grecia,Sarchi"){
+        }else if(name == "Poas,Doka,Grecia"){
           PDGS();
         }else if(name == "Manuel Antonio"){
           ManuelAntonio();
