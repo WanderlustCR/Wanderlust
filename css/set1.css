@@ -1187,8 +1187,10 @@ figure.effect-zoe h2 {
 figure.effect-zoe p.icon-links a {
 	float: right;
 	color: #3c4a50;
-	font-size: 1.4em;
+	font-size: 6em;
 }
+
+
 
 figure.effect-zoe:hover p.icon-links a:hover,
 figure.effect-zoe:hover p.icon-links a:focus {
@@ -1343,17 +1345,22 @@ figure.effect-chico:hover p {
 	}
 }
 
-
+.icon-links p{
+	background: black;
+	font-size: 6em;
+}
 
 
 /**/
 #hero1{
- background:url(../img/Slider/perezoso.png);
+ background:url(../img/background.jpg);
   background-size:cover;
   background-position:center center;
   background-attachment:fixed;
 
 }
+
+
 #hero2{
 	background:url(../img/Slider/Volcan.png);
   background-size:cover;
@@ -1388,19 +1395,33 @@ figure.effect-chico:hover p {
 
 
 .hero1 .copy {
+	border-radius:  12px;
 	left: 25%;
 	position:absolute; 
   top:50%; 
-  height:20em; 
+  height:14em; 
   margin-top:-5em; 
   width:60%;
   justify-content: center;
   display: inline;
+
 }
+
+
 
 .hero1 h2, .hero p{ 
 }
 
+	
+.copy input{
+	border: auto;
+  border-radius: 15px 0px 0px 15px;
+}
+
+.copy button{
+	border: auto;
+  border-radius: 0px 15px 15px 0px;
+}
 
 .hero2 h2, .hero2 p{ 
 	color:white;
@@ -1469,3 +1490,56 @@ line-height: 1em;
 }
 
 
+.carousel{
+	height: 60rem;
+	width:50%;
+	background: black;
+	overflow: hidden;
+}
+
+.carousel img{
+	height: 100%;
+	widows: 100%;
+}
+
+.Tit-Shut{
+text-align: left;
+}
+
+.Tit-Shut h2{
+	
+	font-weight: bold;
+	font-size:30px;
+	margin-bottom:20px;
+}
+
+.Terms-cond{
+	text-align: left;
+}
+.Terms-cond h2{
+		font-weight: bold;
+	font-size:20px;
+}
+.Terms-cond li{
+	font-size:15px;
+	font-weight: normal;
+}
+
+.btn-menu a{
+	min-width:300px;
+
+	width: 25%;
+	margin-bottom: 70px;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+.btnSinFondo{
+	background: transparent;
+	border: none;
+  outline: none;
+}
+
+.btnSinFondo :hover{
+	background: transparent;
+}
