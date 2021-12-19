@@ -1,6 +1,15 @@
 const Chat = document.getElementById('FormChat');
 
 
+window.addEventListener('DOMContentLoaded',e=>{
+
+
+		$('.chat').slideToggle(300, 'swing');
+		$('.chat-message-counter').fadeToggle(300, 'swing');
+
+
+})
+
 Chat.addEventListener('submit', (e)=>{
 	e.preventDefault();
 
