@@ -63,7 +63,9 @@ input {
 	font-size: 12px;
 	right: 24px;
 	position: fixed;
-	width: 300px;
+	width: 15%;
+	min-width: 250px;
+
 	z-index: 100;
 }
 
