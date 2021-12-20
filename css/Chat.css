@@ -104,7 +104,8 @@ input {
 	border-radius: 3px;
 	padding: 8px;
 	outline: none;
-	width: 234px;
+	width: 100%;
+	min-width: 200px;
 }
 
 .chat-message-counter {
