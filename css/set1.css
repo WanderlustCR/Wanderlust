@@ -37,7 +37,7 @@
   vertical-align: middle;
 }
 
-#hero h1 {//
+#hero h1 {
   margin: 30px 0 10px 0;
   font-weight: 700;
   line-height: 48px;
@@ -195,7 +195,8 @@ text-align: center;
 .grid {
 	position: relative;
 	margin: 1em 0 4em;
-	
+	width: 100%;
+	margin: auto;
 	max-width: 1000px;
 	list-style: none;
 	text-align: center;
@@ -212,16 +213,14 @@ text-align: center;
 	max-width: 480px;
 	max-height: 360px;
 	width: 48%;
-	background: #3085a3;
+	background: #3085a305;
 	text-align: center;
-	cursor: pointer;
+	
 }
 
 .grid figure img {
 	position: relative;
 	display: block;
-	min-height: 100%;
-	max-width: 100%;
 	opacity: 0.8;
 }
 
@@ -1172,6 +1171,7 @@ figure.effect-zoe figcaption {
 	bottom: 0;
 	padding: 1em;
 	height: 3.75em;
+	width: 100%;
 	background: #fff;
 	color: #3c4a50;
 	-webkit-transition: -webkit-transform 0.35s;
@@ -1188,6 +1188,11 @@ figure.effect-zoe p.icon-links a {
 	float: right;
 	color: #3c4a50;
 	font-size: 6em;
+}
+figure.effect-zoe p.icon-links  {
+	
+	color: #fff0;
+	
 }
 
 
@@ -1243,33 +1248,38 @@ figure.effect-zoe h2 {
 	display: inline-block;
 }
 
-figure.effect-zoe:hover p.description {
+figure.effect-zoe p.description {
+	
 	opacity: 1;
 }
 
-figure.effect-zoe:hover figcaption,
-figure.effect-zoe:hover h2,
-figure.effect-zoe:hover p.icon-links a {
+figure.effect-zoe figcaption,
+figure.effect-zoe h2,
+figure.effect-zoe p.icon-links a {
+	
 	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
 }
+figure.effect-zoe figcaption{
+	background-color: #a6d678c7;
+}
 
-figure.effect-zoe:hover h2 {
+figure.effect-zoe h2 {
 	-webkit-transition-delay: 0.05s;
 	transition-delay: 0.05s;
 }
 
-figure.effect-zoe:hover p.icon-links a:nth-child(3) {
+figure.effect-zoe p.icon-links a:nth-child(3) {
 	-webkit-transition-delay: 0.1s;
 	transition-delay: 0.1s;
 }
 
-figure.effect-zoe:hover p.icon-links a:nth-child(2) {
+figure.effect-zoe p.icon-links a:nth-child(2) {
 	-webkit-transition-delay: 0.15s;
 	transition-delay: 0.15s;
 }
 
-figure.effect-zoe:hover p.icon-links a:first-child {
+figure.effect-zoe p.icon-links a:first-child {
 	-webkit-transition-delay: 0.2s;
 	transition-delay: 0.2s;
 }
@@ -1353,16 +1363,18 @@ figure.effect-chico:hover p {
 
 /**/
 #hero1{
- background:url(../img/background.jpg);
+ background:url(../img/background.png);
   background-size:cover;
   background-position:center center;
   background-attachment:fixed;
-
+  min-width: 320px;
+  min-height: 600px;
 }
 
 
 #hero2{
-	background:url(../img/Slider/Volcan.png);
+  min-width: 320px;
+  background:url(../img/Slider/Volcan.png);
   background-size:cover;
   background-position:center center;
   background-attachment:fixed;
@@ -1418,9 +1430,18 @@ figure.effect-chico:hover p {
   border-radius: 15px 0px 0px 15px;
 }
 
+.keep input  {
+	border-radius: 15px 15px 15px 15px;
+}
+
+
+
 .copy button{
 	border: auto;
   border-radius: 0px 15px 15px 0px;
+}
+.keep button {
+	border-radius: 0px 0px 0px 0px;
 }
 
 .hero2 h2, .hero2 p{ 
@@ -1469,9 +1490,10 @@ figure.effect-chico:hover p {
 
 .btnBuscar{
 	margin-top: 50px;
-	font-size: calc(1em + 1vw);
-	line-height: 1em;
+	font-size: 20px;
+	line-height: 1vh;
 	width: 30%;
+	min-width: 50px;
 	height: 30%;
 	float: right;
   text-align: left;
@@ -1482,11 +1504,17 @@ figure.effect-chico:hover p {
 	float: left;
   text-align: left;
   display: inline;
-	font-size: calc(1em + 1vw);
+	font-size: 3vh;
 line-height: 1em;
 	margin-top: 50px;
 	width: 70%;
 	height: 30%;
+}
+
+.more{
+	width: 90%;
+	background: #78d6c5;
+	color: #78d6c5;
 }
 
 
@@ -1535,15 +1563,215 @@ text-align: left;
 }
 
 .btn-menu a :hover{
-background-color:#64a624;
+background-color:#78d6c5;
 }
 
 .btnSinFondo{
+	background: transparent;
+	border: #78d6c5;
+
+  outline: none;
+}
+.btnSiz{
+	width: 100%;
+}
+
+.tour{
+	overflow: hidden;
+}
+
+.OverHidden{
+	overflow: hidden;
+}
+
+.btnTour{
+	width: auto;
 	background: transparent;
 	border: none;
   outline: none;
 }
 
-.btnSinFondo :hover{
-	background: transparent;
+
+
+.efect{
+	
+	width: 100%;
+}
+.click{
+	cursor: pointer;
+}
+
+.contenedor article .btn-abrir-popup {
+	background-color: #5e7de3;
+	border-radius: 3px;
+	border-style: none;
+	color: #ffffff;
+	cursor: pointer;
+	font-family: 'Montserrat', sans-serif;
+	height: 40px;
+	line-height: 40px;
+	margin-bottom: 20px;
+	padding: 0 20px;
+	transition: background-color 0.3s ease;
+}
+
+.contenedor article .btn-abrir-popup:hover,
+.contenedor article .btn-abrir-popup:focus,
+.contenedor article .btn-abrir-popup:active {
+	background-color: rgba(94, 125, 227, 0.9);
+}
+
+
+/* Popup */
+.overlay {
+	align-items: center;
+	background-color: rgba(0, 0, 0, 0.3);
+	bottom: 0;
+	display: flex;
+	justify-content: center;
+	left: 0;
+	position: fixed;
+	right: 0;
+	top: 0;
+	visibility: hidden;
+	z-index: 100000;
+}
+
+.overlay.active {
+	visibility: visible;
+}
+
+.popup {
+	background-color: #f8f8f8;
+	border-radius: 3px;
+	box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
+	font-family: 'Montserrat', sans-serif;
+	max-width: 90%;
+	opacity: 0;
+	padding: 20px;
+	text-align: center;
+	transform: scale(0.7);
+	transition: opacity 0.3s ease,
+							transform 0.3s ease;
+	width: 500px;
+}
+
+.popup .btn-cerrar-popup {
+	display: block;
+	color: #bbbbbb;
+	line-height: 16px;
+	text-align: right;
+	transition: color 0.3s ease;
+}
+
+.popup .btn-cerrar-popup:hover,
+.popup .btn-cerrar-popup:focus,
+.popup .btn-cerrar-popup:active {
+	color: #000000;
+}
+
+.popup h3 {
+	font: 600 36px 'Montserrat', sans-serif;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+}
+
+.popup h4 {
+	font: 300 26px 'Montserrat', sans-serif;
+	margin-bottom: 40px;
+}
+
+.popup form .contenedor-inputs input {
+	border: 1px solid #bbbbbb;
+	font-size: 18px;
+	height: 52px;
+	line-height: 52px;
+	margin-bottom: 20px;
+	text-align: center;
+	width: 100%;
+}
+
+.popup form .btn-submit {
+	background-color: #5e7de3;
+	border-radius: 3px;
+	border-style: none;
+	color: #ffffff;
+	cursor: pointer;
+	font: 300 16px 'Montserrat', sans-serif; 
+	height: 40px;
+	line-height: 40px;
+	padding: 0 20px;
+	transition: background-color 0.3s ease;
+}
+
+.popup form .btn-submit:hover,
+.popup form .btn-submit:focus,
+.popup form .btn-submit:active {
+	background-color: rgba(94, 125, 227, 0.9);
+}
+
+/* Animaciones */
+.popup.active {
+	opacity: 5;
+	transform: scale(1);
+}
+
+.popup.active h3 {
+	-webkit-animation: entrada-titulo 0.8s 0.5s ease forwards;
+	        animation: entrada-titulo 0.8s 0.5s ease forwards;
+	opacity: 0;
+	transform: translateY(-25px);
+}
+
+.popup.active h4 {
+	-webkit-animation: entrada-subtitulo 0.8s 0.5s ease forwards;
+	        animation: entrada-subtitulo 0.8s 0.5s ease forwards;
+	opacity: 0;
+	transform: translateY(25px);
+}
+
+.popup.active .contenedor-inputs {
+		-webkit-animation: entrada-inputs 1s 1s ease forwards;
+		        animation: entrada-inputs 1s 1s ease forwards;
+		opacity: 0;
+}
+
+@-webkit-keyframes entrada-titulo {
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes entrada-titulo {
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@-webkit-keyframes entrada-subtitulo {
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes entrada-subtitulo {
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@-webkit-keyframes entrada-inputs {
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes entrada-inputs {
+	to {
+		opacity: 1;
+	}
 }
